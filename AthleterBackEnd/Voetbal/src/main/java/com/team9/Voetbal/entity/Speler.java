@@ -6,14 +6,14 @@ import lombok.Data;
 import java.util.Date;
 
 @Data
-@Document(collection = "speler")
+@Document(collection = "Speler")
 public class Speler {
     @Id
-    private String id;
-    private Integer teamID;
-    private Integer positieID;
-    private String naam;
-    private Date geboorteDatum;
+    private String SpelerID;
+    private Integer TeamID;
+    private Integer PositieID;
+    private String Naam;
+    private Date GorteDatum;
 
 
 }
