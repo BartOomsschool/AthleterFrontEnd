@@ -18,5 +18,5 @@ public class Speler {
     private Date geboortedatum;
     private String geslacht;
     private int positieId;
-    private int TeamId;
+    private int teamId;
 }
