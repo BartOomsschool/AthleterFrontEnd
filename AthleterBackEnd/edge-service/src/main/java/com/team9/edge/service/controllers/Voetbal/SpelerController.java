@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.ArrayList;
+
 import java.util.List;
 
 @RestController
@@ -23,7 +23,7 @@ public class SpelerController {
     @Autowired
     private ObjectMapper objectMapper;
 
-    @GetMapping("speler/{teamID}")
+    @GetMapping("{teamID}")
     public List<Speler> getSpelersByTeamID(@PathVariable("teamID") Integer teamID){
         GenericResponseWrapper wrapper = restTemplate.getForObject("http://voetbal-service/spelers/search/findSpelerByTeamID?teamID=" + teamID, GenericResponseWrapper.class);
 
