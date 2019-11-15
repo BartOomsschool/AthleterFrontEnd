@@ -23,19 +23,21 @@ public class SpelerController {
     @Autowired
     private ObjectMapper objectMapper;
 
-    @GetMapping("speler/{spelerID}")
-    public List<Speler> getSpelersByUserID(@PathVariable("spelerID") Integer spelerID){
-        GenericResponseWrapper wrapper = restTemplate.getForObject("http://voetbal-service/spelers.search/findSpelersByUserId?spelerID=" + spelerID, GenericResponseWrapper.class);
+    @GetMapping("/{teamID}")
+    public List<Speler> getSpelersByTeamID(@PathVariable("teamID") Integer teamID){
+        GenericResponseWrapper wrapper = restTemplate.getForObject("http://voetbal-service/spelers/search/findSpelerByTeamID?teamID=" + teamID, GenericResponseWrapper.class);
 
         List<Speler> spelers  = objectMapper.convertValue(wrapper.get_embedded().get("spelers"), new TypeReference<List<Speler>>() { });
 
+/*
         List<Speler> returnList = new ArrayList<>();
         for (Speler speler: spelers){
             Speler test = restTemplate.getForObject("http://voetbal-service/spelers/" + speler.getId(), Speler.class);
             returnList.add(test);
         }
+*/
 
 
-        return returnList;
+        return spelers;
     }
 }
