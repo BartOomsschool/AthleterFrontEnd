@@ -9,11 +9,11 @@ import java.util.Date;
 @Document(collection = "Speler")
 public class Speler {
     @Id
-    private String SpelerID;
-    private Integer TeamID;
+    private String spelerID;
+    private Integer teamID;
     private Integer PositieID;
     private String Naam;
-    private Date GorteDatum;
+    private Date GeboorteDatum;
 
 
 }
