@@ -23,7 +23,7 @@ public class SpelerController {
     @Autowired
     private ObjectMapper objectMapper;
 
-    @GetMapping("/{teamID}")
+    @GetMapping("speler/{teamID}")
     public List<Speler> getSpelersByTeamID(@PathVariable("teamID") Integer teamID){
         GenericResponseWrapper wrapper = restTemplate.getForObject("http://voetbal-service/spelers/search/findSpelerByTeamID?teamID=" + teamID, GenericResponseWrapper.class);
 

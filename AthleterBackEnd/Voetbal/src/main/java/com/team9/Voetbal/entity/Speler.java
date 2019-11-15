@@ -11,7 +11,7 @@ public class Speler {
     @Id
     private String spelerID;
     private Integer teamID;
-    private Integer PositieID;
+    private Integer positieID;
     private String Naam;
     private Date GeboorteDatum;
 
