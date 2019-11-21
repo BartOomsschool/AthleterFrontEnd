@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { VoetbalComponent } from './views/voetbal/voetbal/voetbal.component';
-import { SpelerToevoegenComponent } from './views/voetbal/speler-toevoegen/speler-toevoegen/speler-toevoegen.component';
+import { SpelerToevoegenComponent } from './views/voetbal/speler/speler-toevoegen/speler-toevoegen/speler-toevoegen.component';
 
 
 

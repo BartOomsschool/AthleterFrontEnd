@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { SpelerService } from 'src/app/services/voetbal/speler.service';
-import { Speler } from 'src/app/models/voetbal/speler.model';
+import { SpelerService } from 'src/app/services/voetbal/speler/speler.service';
+import { Speler } from 'src/app/models/voetbal/speler/speler.model';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,18 +10,22 @@ import { Router } from '@angular/router';
 })
 export class VoetbalComponent implements OnInit {
 
-  constructor(private _spelerService: SpelerService , private router : Router)
+  constructor(private _spelerService: SpelerService , private router: Router)
    {
       this.getSpelers();
    }
 
-    spelers : Speler[];
+    spelers: Speler[];
 
 
   getSpelers(){
     this._spelerService.getSpelers().subscribe(result =>{
       this.spelers = result;
     });
+  }
+
+  naarSpelerToevoegen() {
+    this.router.navigate(['spelerToevoegen']);
   }
 
   naarHome() {

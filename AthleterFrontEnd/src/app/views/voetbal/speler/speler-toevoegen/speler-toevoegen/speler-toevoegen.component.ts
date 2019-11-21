@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder } from '@angular/forms';
-import { SpelerService } from 'src/app/services/voetbal/speler.service';
+import { SpelerService } from 'src/app/services/voetbal/speler/speler.service';
 
 @Component({
   selector: 'app-speler-toevoegen',
@@ -10,7 +10,7 @@ import { SpelerService } from 'src/app/services/voetbal/speler.service';
 })
 export class SpelerToevoegenComponent implements OnInit {
 
-  submitted : boolean = false;
+  submitted: boolean = false;
 
   constructor(private fb: FormBuilder, private _spelerService: SpelerService) { }
 

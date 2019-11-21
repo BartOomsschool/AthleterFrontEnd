@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Speler } from '../../models/voetbal/speler.model';
+import { Speler } from '../../../models/voetbal/speler/speler.model';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
