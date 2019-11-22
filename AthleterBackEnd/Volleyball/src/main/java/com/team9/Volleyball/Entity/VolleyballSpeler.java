@@ -8,8 +8,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.Date;
 
 @Data
-@Document(collection ="Speler")
-public class Speler {
+@Document(collection ="VolleyballSpeler")
+public class VolleyballSpeler {
     @Id
     private String id;
     private String naam;

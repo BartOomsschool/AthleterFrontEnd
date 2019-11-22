@@ -11,18 +11,18 @@ export class TeamService {
   constructor(private http: HttpClient) { }
 
   getTeams(): Observable<Team[]> {
-      return this.http.get<Team[]>("https://localhost:8050/teams/getTeams");
+      return this.http.get<Team[]>("http://localhost:8050/teams/getTeams");
   }
 
   addTeam(team: Team) {
-      return this.http.post<Team>("https://localhost:8050/teams/postTeam", team);
+      return this.http.post<Team>("http://localhost:8050/teams/postTeam", team);
   }
 
   updateTeam(teamID: number, team: Team) {
-      return this.http.put<Team>("https://localhost:8050/teams/updateTeam/" + teamID, team);
+      return this.http.put<Team>("http://localhost:8050/teams/updateTeam/" + teamID, team);
   }
 
   deleteTeam(teamID: number) {
-      return this.http.delete<Team>("https://localhost:8050/teams/deleteTeam/" + teamID);
+      return this.http.delete<Team>("http://localhost:8050/teams/deleteTeam/" + teamID);
   }
 }

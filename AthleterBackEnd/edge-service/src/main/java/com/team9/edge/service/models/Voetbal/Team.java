@@ -1,22 +1,26 @@
 package com.team9.edge.service.models.Voetbal;
 
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.Data;
+
+@Data
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Team {
-    private int teamID;
+
+    private String teamID;
     private String teamNaam;
 
-    public Team() {
-    }
-
-    public Team(int teamID, String teamNaam) {
+    public Team(String teamID, String teamNaam) {
         this.teamID = teamID;
         this.teamNaam = teamNaam;
     }
 
-    public int getTeamID() {
+    public String getTeamID() {
         return teamID;
     }
 
-    public void setTeamID(int teamID) {
+    public void setTeamID(String teamID) {
         this.teamID = teamID;
     }
 
@@ -26,5 +30,8 @@ public class Team {
 
     public void setTeamNaam(String teamNaam) {
         this.teamNaam = teamNaam;
+    }
+
+    public Team() {
     }
 }

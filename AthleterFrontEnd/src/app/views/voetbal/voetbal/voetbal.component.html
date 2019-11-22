@@ -1,11 +1,10 @@
 <p>voetbal works!</p>
 <ul>
     <li *ngFor="let s of (spelers)">
-        {{s.spelerID}}
-        {{s.teamID}}
-        {{s.positieID}}
-        {{s.Naam}}
-        {{s.Geboortedatum}}
+        <p>{{s.naam}}</p>
+        <p> {{s.teamID}}</p>
+        <p> {{s.positieID}}</p>
+        <p>{{s.Geboortedatum}}</p>
     </li>
 </ul>
 <button (click)="naarSpelerToevoegen()">Speler Toevoegen</button> |
