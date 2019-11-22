@@ -11,12 +11,12 @@ import java.util.Date;
 @Document(collection ="Speler")
 public class Speler {
     @Id
-    private int id;
+    private String id;
     private String naam;
-    private int lengteInCm;
-    private int selecties;
-    private Date geboortedatum;
+    private String lengteInCm;
+    private String selecties;
+    private String geboortedatum;
     private String geslacht;
-    private int positieId;
-    private int teamId;
+    private String positieId;
+    private String teamId;
 }

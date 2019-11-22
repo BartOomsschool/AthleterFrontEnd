@@ -9,6 +9,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection ="positie")
 public class Positie {
     @Id
-    private int id;
+    private String id;
     private String naam;
 }
