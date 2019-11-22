@@ -1,4 +1,4 @@
-package com.team9.edge.service.models.Voetbal;
+package com.team9.edge.service.models.Volleybal;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -6,7 +6,7 @@ import lombok.Data;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Positie {
+public class VolleyballPositie {
     private String id;
     private String naam;
 
@@ -26,11 +26,11 @@ public class Positie {
         this.naam = naam;
     }
 
-    public Positie(String id, String naam) {
+    public VolleyballPositie(String id, String naam) {
         this.id = id;
         this.naam = naam;
     }
 
-    public Positie() {
+    public VolleyballPositie() {
     }
 }
