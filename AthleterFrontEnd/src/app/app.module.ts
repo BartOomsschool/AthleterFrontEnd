@@ -7,12 +7,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { VoetbalComponent } from './views/voetbal/voetbal/voetbal.component';
 import { SpelerToevoegenComponent } from './views/voetbal/speler/speler-toevoegen/speler-toevoegen/speler-toevoegen.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BadmintonComponent } from './views/badminton/badminton/badminton.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VoetbalComponent,
-    SpelerToevoegenComponent
+    SpelerToevoegenComponent,
+    BadmintonComponent
   ],
   imports: [
     BrowserModule,
