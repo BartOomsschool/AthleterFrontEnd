@@ -7,7 +7,7 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 
 public interface SpelerRepository extends MongoRepository<Speler, String>{
-    List<Speler> findSpelerByTeamID(@Param("teamID") Integer teamID);
-    List<Speler> findSpelerByPositieID(@Param("PositieID") Integer PositieID);
-    Speler findSpelerByTeamIDAndPositieID(@Param("TeamID") Integer TeamID, @Param("PositieID") Integer PositieID);
+    List<Speler> findSpelerByTeamID(@Param("teamID") String teamID);
+    List<Speler> findSpelerByPositieID(@Param("positieID") String positieID);
+    Speler findSpelerByTeamIDAndPositieID(@Param("teamID") String teamID, @Param("positieID") String positieID);
 }

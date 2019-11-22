@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.ArrayList;
+
 import java.util.List;
 
 @RestController
@@ -23,8 +23,8 @@ public class SpelerController {
     @Autowired
     private ObjectMapper objectMapper;
 
-    @GetMapping("/{teamID}")
-    public List<Speler> getSpelersByTeamID(@PathVariable("teamID") Integer teamID){
+    @GetMapping("{teamID}")
+    public List<Speler> getSpelersByTeamID(@PathVariable("teamID") String teamID){
         GenericResponseWrapper wrapper = restTemplate.getForObject("http://voetbal-service/spelers/search/findSpelerByTeamID?teamID=" + teamID, GenericResponseWrapper.class);
 
         List<Speler> spelers  = objectMapper.convertValue(wrapper.get_embedded().get("spelers"), new TypeReference<List<Speler>>() { });
@@ -36,7 +36,14 @@ public class SpelerController {
             returnList.add(test);
         }
 */
+        return spelers;
+    }
 
+    @GetMapping("/getspelers")
+    public List<Speler> getSpelers(){
+        GenericResponseWrapper wrapper = restTemplate.getForObject("http://voetbal-service/spelers/", GenericResponseWrapper.class);
+
+        List<Speler> spelers  = objectMapper.convertValue(wrapper.get_embedded().get("spelers"), new TypeReference<List<Speler>>() { });
 
         return spelers;
     }
