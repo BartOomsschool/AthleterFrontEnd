@@ -13,6 +13,6 @@ public class Atleet {
     private String ID;
     private String Naam;
     private Date Geboortedatum;
-    private String PloegID;
-    private String PositieID;
+    private Integer PloegID;
+    private Integer PositieID;
 }
