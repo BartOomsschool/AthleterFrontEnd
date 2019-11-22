@@ -1,33 +1,35 @@
 package com.team9.edge.service.models.Hockey;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
 import java.util.Date;
 
 @Data
+@JsonIgnoreProperties(ignoreUnknown =  true)
 public class Atleet {
-        private Integer ID;
+        private String ID;
         private String Naam;
         private Date Geboortedatum;
-        private Integer ploegID;
-        private Integer PositieID;
+        private String ploegID;
+        private String PositieID;
 
     public Atleet() {
     }
 
-    public Atleet(Integer ID, String naam, Date geboortedatum, Integer ploegID, Integer positieID) {
+    public Atleet(String ID, String naam, Date geboortedatum, String ploegID, String positieID) {
         this.ID = ID;
         Naam = naam;
         Geboortedatum = geboortedatum;
-        ploegID = ploegID;
+        this.ploegID = ploegID;
         PositieID = positieID;
     }
 
-    public Integer getID() {
+    public String getID() {
         return ID;
     }
 
-    public void setID(Integer ID) {
+    public void setID(String ID) {
         this.ID = ID;
     }
 
@@ -47,19 +49,19 @@ public class Atleet {
         Geboortedatum = geboortedatum;
     }
 
-    public Integer getPloegID() {
+    public String getPloegID() {
         return ploegID;
     }
 
-    public void setPloegID(Integer ploegID) {
-        ploegID = ploegID;
+    public void setPloegID(String ploegID) {
+        this.ploegID = ploegID;
     }
 
-    public Integer getPositieID() {
+    public String getPositieID() {
         return PositieID;
     }
 
-    public void setPositieID(Integer positieID) {
+    public void setPositieID(String positieID) {
         PositieID = positieID;
     }
 }
