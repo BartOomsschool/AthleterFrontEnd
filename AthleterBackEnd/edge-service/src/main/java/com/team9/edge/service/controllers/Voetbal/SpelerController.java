@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.ArrayList;
+
 import java.util.List;
 
 @RestController
@@ -23,19 +23,28 @@ public class SpelerController {
     @Autowired
     private ObjectMapper objectMapper;
 
-    @GetMapping("speler/{spelerID}")
-    public List<Speler> getSpelersByUserID(@PathVariable("spelerID") Integer spelerID){
-        GenericResponseWrapper wrapper = restTemplate.getForObject("http://voetbal-service/spelers.search/findSpelersByUserId?spelerID=" + spelerID, GenericResponseWrapper.class);
+    @GetMapping("{teamID}")
+    public List<Speler> getSpelersByTeamID(@PathVariable("teamID") String teamID){
+        GenericResponseWrapper wrapper = restTemplate.getForObject("http://voetbal-service/spelers/search/findSpelerByTeamID?teamID=" + teamID, GenericResponseWrapper.class);
 
         List<Speler> spelers  = objectMapper.convertValue(wrapper.get_embedded().get("spelers"), new TypeReference<List<Speler>>() { });
 
+/*
         List<Speler> returnList = new ArrayList<>();
         for (Speler speler: spelers){
             Speler test = restTemplate.getForObject("http://voetbal-service/spelers/" + speler.getId(), Speler.class);
             returnList.add(test);
         }
+*/
+        return spelers;
+    }
 
+    @GetMapping("/getspelers")
+    public List<Speler> getSpelers(){
+        GenericResponseWrapper wrapper = restTemplate.getForObject("http://voetbal-service/spelers/", GenericResponseWrapper.class);
 
-        return returnList;
+        List<Speler> spelers  = objectMapper.convertValue(wrapper.get_embedded().get("spelers"), new TypeReference<List<Speler>>() { });
+
+        return spelers;
     }
 }

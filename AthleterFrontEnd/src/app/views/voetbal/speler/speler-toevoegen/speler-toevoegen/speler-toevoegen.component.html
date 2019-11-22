@@ -1,0 +1,26 @@
+<p>speler-toevoegen works!</p>
+
+
+<form [formGroup]="spelerToevoegenForm" (ngSubmit)="onSubmitSpeler()">
+    <p>
+        <mat-form-field>
+            <input matInput type="text" formControlName="Naam" placeholder="Naam" />
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field>
+            <input matInput type="text" formControlName="teamID" placeholder="teamID" />
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field>
+            <input matInput type="text" formControlName="positieID" placeholder="positieID" />
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field>
+            <input matInput type="date" formControlName="Geboortedatum" placeholder="Geboortedatum" />
+        </mat-form-field>
+    </p>
+    <button mat-raised-button color="primary" type="submit" [disabled]="!spelerToevoegenForm.valid">Toevoegen</button>
+</form>
