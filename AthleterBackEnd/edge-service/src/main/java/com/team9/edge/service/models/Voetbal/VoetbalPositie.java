@@ -6,11 +6,15 @@ import lombok.Data;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Positie {
+public class VoetbalPositie {
+
     private String positieID;
     private String number;
 
-    public Positie(String positieID, String number) {
+    public VoetbalPositie() {
+    }
+
+    public VoetbalPositie(String positieID, String number) {
         this.positieID = positieID;
         this.number = number;
     }

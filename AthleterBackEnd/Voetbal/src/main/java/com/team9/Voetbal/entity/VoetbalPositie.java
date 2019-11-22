@@ -10,5 +10,5 @@ import java.util.Date;
 public class VoetbalPositie {
     @Id
     private String positieID;
-    private String Naam;
+    private String number;
 }

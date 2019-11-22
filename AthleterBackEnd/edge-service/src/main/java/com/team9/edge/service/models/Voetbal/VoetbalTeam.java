@@ -6,12 +6,15 @@ import lombok.Data;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Team {
+public class VoetbalTeam {
 
     private String teamID;
     private String teamNaam;
 
-    public Team(String teamID, String teamNaam) {
+    public VoetbalTeam() {
+    }
+
+    public VoetbalTeam(String teamID, String teamNaam) {
         this.teamID = teamID;
         this.teamNaam = teamNaam;
     }
@@ -32,6 +35,5 @@ public class Team {
         this.teamNaam = teamNaam;
     }
 
-    public Team() {
-    }
+
 }

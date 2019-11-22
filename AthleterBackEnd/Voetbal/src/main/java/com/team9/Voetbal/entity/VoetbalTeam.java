@@ -11,5 +11,5 @@ import java.util.Date;
 public class VoetbalTeam {
     @Id
     private String teamID;
-    private String Naam;
+    private String teamNaam;
 }
