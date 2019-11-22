@@ -1,22 +1,22 @@
 package com.team9.edge.service.models.Voetbal;
 
 public class Team {
-    private int teamID;
+    private String teamID;
     private String teamNaam;
 
     public Team() {
     }
 
-    public Team(int teamID, String teamNaam) {
+    public Team(String teamID, String teamNaam) {
         this.teamID = teamID;
         this.teamNaam = teamNaam;
     }
 
-    public int getTeamID() {
+    public String getTeamID() {
         return teamID;
     }
 
-    public void setTeamID(int teamID) {
+    public void setTeamID(String teamID) {
         this.teamID = teamID;
     }
 

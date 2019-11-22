@@ -11,18 +11,18 @@ export class PositieService {
   constructor(private http: HttpClient) { }
 
   getPosities(): Observable<Positie[]> {
-      return this.http.get<Positie[]>("https://localhost:8050/posities/getPosities");
+      return this.http.get<Positie[]>("http://localhost:8050/posities/getPosities");
   }
 
   addPositie(positie: Positie) {
-      return this.http.post<Positie>("https://localhost:8050/posities/postTeam", positie);
+      return this.http.post<Positie>("http://localhost:8050/posities/postPositie", positie);
   }
 
   updatePositie(positieID: number, positie: Positie) {
-      return this.http.put<Positie>("https://localhost:8050/posities/updatePositie/" + positieID, positie);
+      return this.http.put<Positie>("http://localhost:8050/posities/updatePositie/" + positieID, positie);
   }
 
   deletePositie(positieID: number) {
-      return this.http.delete<Positie>("https://localhost:8050/posities/deletePositie/" + positieID);
+      return this.http.delete<Positie>("http://localhost:8050/posities/deletePositie/" + positieID);
   }
 }

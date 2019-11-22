@@ -13,6 +13,4 @@ public class Speler {
     private String positieID;
     private String Naam;
     private Date GeboorteDatum;
-
-
 }

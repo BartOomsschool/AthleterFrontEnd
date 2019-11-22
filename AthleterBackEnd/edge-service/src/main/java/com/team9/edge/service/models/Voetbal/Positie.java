@@ -1,10 +1,10 @@
 package com.team9.edge.service.models.Voetbal;
 
 public class Positie {
-    private int positieID;
-    private int number;
+    private String positieID;
+    private String number;
 
-    public Positie(int positieID, int number) {
+    public Positie(String positieID, String number) {
         this.positieID = positieID;
         this.number = number;
     }
@@ -12,19 +12,19 @@ public class Positie {
     public Positie() {
     }
 
-    public int getPositieID() {
+    public String getPositieID() {
         return positieID;
     }
 
-    public void setPositieID(int positieID) {
+    public void setPositieID(String positieID) {
         this.positieID = positieID;
     }
 
-    public int getNumber() {
+    public String getNumber() {
         return number;
     }
 
-    public void setNumber(int number) {
+    public void setNumber(String number) {
         this.number = number;
     }
 }
