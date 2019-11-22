@@ -15,22 +15,22 @@ public class Athleet {
     @Column(name="athleetID")
     private int athleetID;
 
- /*   @Column (name="categorieID")
-    private int categoieID;*/
+    @Column (name="categorieID")
+    private int categorieID;
 
-    @ManyToOne
+    /*@ManyToOne
     @JoinColumn(name="categorieID")
-    private Categorie categorie;
+    private Categorie categorie;*/
 
     @Column (name="rank")
     private int rank;
 
-  /*  @Column (name="landID")
-    private int landID;*/
+    @Column (name="landID")
+    private int landID;
 
-    @ManyToOne
+    /*@ManyToOne
     @JoinColumn(name="landID")
-    private Land land;
+    private Land land;*/
 
     @Column (name="naam")
     private String naam;
@@ -41,10 +41,10 @@ public class Athleet {
     @Column (name="afbeelding")
     private String afbeelding;
 
-/*    @Column (name="partnerID")
-    private Integer partnerID;*/
+    @Column (name="partnerID")
+    private Integer partnerID;
 
-    @ManyToOne
+    /*@ManyToOne
     @JoinColumn(name="partnerID")
-    private Athleet partner;
+    private Athleet partner;*/
 }
