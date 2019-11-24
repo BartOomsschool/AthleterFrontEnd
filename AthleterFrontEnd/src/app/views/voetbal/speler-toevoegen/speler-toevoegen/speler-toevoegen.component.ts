@@ -23,8 +23,11 @@ export class SpelerToevoegenComponent implements OnInit {
 
     
     onSubmitSpeler() {
+      console.log('spelerForm', this.spelerToevoegenForm.value);
       this.submitted = true;
-      this._spelerService.addSpeler(this.spelerToevoegenForm.value).subscribe();
+      this._spelerService.addSpeler(this.spelerToevoegenForm.value).subscribe(result => {
+        console.log('toegevoegd: ', result);
+      });
     }
 
   ngOnInit() {

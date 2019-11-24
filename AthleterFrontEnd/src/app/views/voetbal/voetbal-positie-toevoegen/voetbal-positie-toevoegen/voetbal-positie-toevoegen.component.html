@@ -1,0 +1,11 @@
+<p>voetbal-positie-toevoegen works!</p>
+
+
+<form [formGroup]="voetbalPositieToevoegenForm" (ngSubmit)="onSubmitVoetbalPositie()">
+    <p>
+        <mat-form-field>
+            <input matInput type="text" formControlName="Number" placeholder="nummer" />
+        </mat-form-field>
+    </p>
+    <button mat-raised-button color="primary" type="submit" [disabled]="!voetbalPositieToevoegenForm.valid">Toevoegen</button>
+</form>

@@ -8,5 +8,5 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 
 public interface VoetbalTeamRepository extends MongoRepository<VoetbalTeam, String> {
-    List<VoetbalTeam> getVoetbalTeams();
+    List<VoetbalTeam> getVoetbalTeamByteamID(@Param("teamID") String teamID);
 }

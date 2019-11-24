@@ -14,8 +14,8 @@ public class VoetbalTeam {
     public VoetbalTeam() {
     }
 
-    public VoetbalTeam(String teamID, String teamNaam) {
-        this.teamID = teamID;
+    public VoetbalTeam(String teamNaam) {
+
         this.teamNaam = teamNaam;
     }
 

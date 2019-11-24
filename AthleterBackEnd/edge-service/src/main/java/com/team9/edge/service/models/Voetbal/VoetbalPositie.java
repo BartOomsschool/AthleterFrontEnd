@@ -14,8 +14,8 @@ public class VoetbalPositie {
     public VoetbalPositie() {
     }
 
-    public VoetbalPositie(String positieID, String number) {
-        this.positieID = positieID;
+    public VoetbalPositie(String number) {
+
         this.number = number;
     }
 
