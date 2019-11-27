@@ -52,7 +52,7 @@ public class VoetbalTeamController {
         list.add(new MappingJackson2CborHttpMessageConverter());
         restTemplate.setMessageConverters(list);
 
-        restTemplate.put("http://voetbal-service/voetbalTeams/" + team.getTeamID(), team , String.class);
+        restTemplate.put("http://voetbal-service/voetbalTeams/" + team.getTeamId(), team , String.class);
         return ResponseEntity.ok().build();
     }
 }

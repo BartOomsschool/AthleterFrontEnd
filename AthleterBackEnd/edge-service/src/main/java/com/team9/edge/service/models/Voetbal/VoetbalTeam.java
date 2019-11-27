@@ -19,11 +19,11 @@ public class VoetbalTeam {
         this.teamNaam = teamNaam;
     }
 
-    public String getTeamID() {
+    public String getTeamId() {
         return teamID;
     }
 
-    public void setTeamID(String teamID) {
+    public void setTeamId(String teamID) {
         this.teamID = teamID;
     }
 

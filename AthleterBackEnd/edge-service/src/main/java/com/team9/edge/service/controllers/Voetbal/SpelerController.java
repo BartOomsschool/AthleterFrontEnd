@@ -53,7 +53,7 @@ public class SpelerController {
     @PostMapping("/postspeler")
     public ResponseEntity<String> postSpeler(@RequestBody Speler speler){
 
-        Speler player = new Speler(speler.getTeamID(),speler.getPositieID(),speler.getNaam(),speler.getGeboorteDatum());
+        Speler player = new Speler(speler.getNaam(),speler.getTeamID(),speler.getPositieID(),speler.getGeboorteDatum());
 
         ResponseEntity<String> result = restTemplate.postForEntity(
                 "http://voetbal-service/spelers/", player, String.class
