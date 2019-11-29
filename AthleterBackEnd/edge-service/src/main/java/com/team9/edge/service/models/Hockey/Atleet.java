@@ -25,6 +25,10 @@ public class Atleet {
         PositieID = positieID;
     }
 
+    public Atleet(String naam) {
+        Naam = naam;
+    }
+
     public String getID() {
         return ID;
     }
