@@ -5,11 +5,12 @@ import lombok.Data;
 
 import java.util.Date;
 @Data
-@Document(collection = "VoetbalTeam")
-
-
-public class VoetbalTeam {
+@Document(collection = "VoetbalAtleet")
+public class VoetbalAtleet {
     @Id
-    private String teamID;
-    private String teamNaam;
+    private String voetbalAtleetID;
+    private String naam;
+    private String team;
+    private String positie;
+
 }

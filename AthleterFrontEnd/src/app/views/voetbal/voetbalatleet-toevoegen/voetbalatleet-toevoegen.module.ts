@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SpelerToevoegenComponent } from './speler-toevoegen/speler-toevoegen.component';
+import { VoetbalAtleetToevoegenComponent } from './voetbalatleet-toevoegen/voetbalatleet-toevoegen.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 
 
 
 @NgModule({
-  declarations: [SpelerToevoegenComponent],
+  declarations: [VoetbalAtleetToevoegenComponent],
   imports: [
     SharedModule
   ]
 })
-export class SpelerToevoegenModule { }
+export class AtleetToevoegenModule { }

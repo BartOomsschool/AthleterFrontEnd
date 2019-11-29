@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder } from '@angular/forms';
-import { SpelerService } from 'src/app/services/voetbal/speler/speler.service';
+import { VoetbalAtleetService } from 'src/app/services/voetbal/voetbal-atleet/voetbal-atleet.service';
 
 @Component({
   selector: 'app-speler-toevoegen',
   templateUrl: './speler-toevoegen.component.html',
   styleUrls: ['./speler-toevoegen.component.scss'],
-  providers: [SpelerService]
+  providers: [VoetbalAtleetService]
 })
-export class SpelerToevoegenComponent implements OnInit {
+export class VoetbalAtleetToevoegenComponent implements OnInit {
 
   submitted: boolean = false;
 
-  constructor(private fb: FormBuilder, private _spelerService: SpelerService) { }
+  constructor(private fb: FormBuilder, private _voetbalAtleetService: VoetbalAtleetService) { }
 
   spelerToevoegenForm = this.fb.group({
     Naam: ['', Validators.required],
@@ -21,11 +21,10 @@ export class SpelerToevoegenComponent implements OnInit {
     Geboortedatum:['', Validators.required]
     });
 
-    
     onSubmitSpeler() {
       console.log('spelerForm', this.spelerToevoegenForm.value);
       this.submitted = true;
-      this._spelerService.addSpeler(this.spelerToevoegenForm.value).subscribe(result => {
+      this._voetbalAtleetService.addAtleet(this.spelerToevoegenForm.value).subscribe(result => {
         console.log('toegevoegd: ', result);
       });
     }

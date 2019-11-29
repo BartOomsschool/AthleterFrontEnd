@@ -1,11 +1,12 @@
-import { VoetbalTeamService } from './voetbal-team.model';
 import { TestBed } from '@angular/core/testing';
 
-describe('VoetbalTeamService', () => {
+import { VoetbalAtleetService } from './voetbal-atleet.service';
+
+describe('VoetbalAtleetService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: VoetbalTeamService = TestBed.get(VoetbalTeamService);
+    const service: VoetbalAtleetService = TestBed.get(VoetbalAtleetService);
     expect(service).toBeTruthy();
   });
 });
