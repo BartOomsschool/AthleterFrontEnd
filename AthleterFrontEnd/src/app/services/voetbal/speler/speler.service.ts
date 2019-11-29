@@ -15,7 +15,7 @@ export class SpelerService {
   }
 
   addSpeler(speler: Speler) {
-      return this.http.post<Speler>("http://localhost:8050/spelers/postSpeler", speler);
+      return this.http.post<Speler>("http://localhost:8050/spelers/postspeler", speler);
   }
 
   updateSpeler(spelerID: number, speler: Speler) {

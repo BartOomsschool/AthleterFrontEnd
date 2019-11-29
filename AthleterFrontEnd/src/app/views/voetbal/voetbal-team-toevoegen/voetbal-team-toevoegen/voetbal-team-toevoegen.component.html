@@ -1,0 +1,11 @@
+<p>voetbal-team-toevoegen works!</p>
+
+
+<form [formGroup]="voetbalTeamToevoegenForm" (ngSubmit)="onSubmitVoetbalTeam()">
+    <p>
+        <mat-form-field>
+            <input matInput type="text" formControlName="teamNaam" placeholder="Naam" />
+        </mat-form-field>
+    </p>
+    <button mat-raised-button color="primary" type="submit" [disabled]="!voetbalTeamToevoegenForm.valid">Toevoegen</button>
+</form>

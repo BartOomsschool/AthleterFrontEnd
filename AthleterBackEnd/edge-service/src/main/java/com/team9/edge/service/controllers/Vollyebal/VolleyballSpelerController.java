@@ -12,18 +12,18 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 import java.util.List;
 @RestController
-@RequestMapping("/VolleyballSpeler")
+@RequestMapping("/volleyballSpelers")
 public class VolleyballSpelerController {
     @Autowired
     private RestTemplate restTemplate;
     @Autowired
     private ObjectMapper objectMapper;
 
-    @GetMapping("/getVolleyballSpeler")
+    @GetMapping("/getVolleyballSpelers")
     public List<VolleyballSpeler> getVolleyballSpelers(){
         GenericResponseWrapper wrapper = restTemplate.getForObject("http://volleybal-service/volleyballSpelers/", GenericResponseWrapper.class);
 
-        List<VolleyballSpeler> spelers  = objectMapper.convertValue(wrapper.get_embedded().get("VolleyballSpeler"), new TypeReference<List<VolleyballSpeler>>() { });
+        List<VolleyballSpeler> spelers  = objectMapper.convertValue(wrapper.get_embedded().get("volleyballSpelers"), new TypeReference<List<VolleyballSpeler>>() { });
 
         return spelers;
     }

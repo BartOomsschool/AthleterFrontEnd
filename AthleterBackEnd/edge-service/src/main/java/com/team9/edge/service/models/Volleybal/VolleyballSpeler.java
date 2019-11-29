@@ -3,50 +3,24 @@ package com.team9.edge.service.models.Volleybal;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
-import java.util.Date;
-
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class VolleyballSpeler {
-    private String spelerID;
-    private String teamID;
-    private String positieID;
+    private String id;
     private String naam;
-    private Date geboorteDatum;
-
-    public VolleyballSpeler() {
-    }
-
-    public VolleyballSpeler(String spelerID, String teamID, String positieID, String naam, Date geboorteDatum) {
-        this.spelerID = spelerID;
-        this.teamID = teamID;
-        this.positieID = positieID;
-        this.naam = naam;
-        this.geboorteDatum = geboorteDatum;
-    }
+    private String lengteInCm;
+    private String selecties;
+    private String geboortedatum;
+    private String geslacht;
+    private String positieId;
+    private String teamId;
 
     public String getId() {
-        return spelerID;
+        return id;
     }
 
-    public void setId(String spelerID) {
-        this.spelerID = spelerID;
-    }
-
-    public String getTeamID() {
-        return teamID;
-    }
-
-    public void setTeamID(String teamID) {
-        this.teamID = teamID;
-    }
-
-    public String getPositieID() {
-        return positieID;
-    }
-
-    public void setPositieID(String positieID) {
-        this.positieID = positieID;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getNaam() {
@@ -57,11 +31,65 @@ public class VolleyballSpeler {
         this.naam = naam;
     }
 
-    public Date getGeboorteDatum() {
-        return geboorteDatum;
+    public String getLengteInCm() {
+        return lengteInCm;
     }
 
-    public void setGeboorteDatum(Date geboorteDatum) {
-        this.geboorteDatum = geboorteDatum;
+    public void setLengteInCm(String lengteInCm) {
+        this.lengteInCm = lengteInCm;
+    }
+
+    public String getSelecties() {
+        return selecties;
+    }
+
+    public void setSelecties(String selecties) {
+        this.selecties = selecties;
+    }
+
+    public String getGeboortedatum() {
+        return geboortedatum;
+    }
+
+    public void setGeboortedatum(String geboortedatum) {
+        this.geboortedatum = geboortedatum;
+    }
+
+    public String getGeslacht() {
+        return geslacht;
+    }
+
+    public void setGeslacht(String geslacht) {
+        this.geslacht = geslacht;
+    }
+
+    public String getPositieId() {
+        return positieId;
+    }
+
+    public void setPositieId(String positieId) {
+        this.positieId = positieId;
+    }
+
+    public String getTeamId() {
+        return teamId;
+    }
+
+    public void setTeamId(String teamId) {
+        this.teamId = teamId;
+    }
+
+    public VolleyballSpeler() {
+    }
+
+    public VolleyballSpeler(String id, String naam, String lengteInCm, String selecties, String geboortedatum, String geslacht, String positieId, String teamId) {
+        this.id = id;
+        this.naam = naam;
+        this.lengteInCm = lengteInCm;
+        this.selecties = selecties;
+        this.geboortedatum = geboortedatum;
+        this.geslacht = geslacht;
+        this.positieId = positieId;
+        this.teamId = teamId;
     }
 }

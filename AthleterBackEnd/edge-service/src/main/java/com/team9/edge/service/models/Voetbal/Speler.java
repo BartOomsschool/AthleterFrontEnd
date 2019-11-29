@@ -17,8 +17,8 @@ public class Speler {
     public Speler() {
     }
 
-    public Speler(String spelerID, String teamID, String positieID, String naam, Date geboorteDatum) {
-        this.spelerID = spelerID;
+    public Speler(String teamID, String positieID, String naam, Date geboorteDatum) {
+
         this.teamID = teamID;
         this.positieID = positieID;
         this.naam = naam;
