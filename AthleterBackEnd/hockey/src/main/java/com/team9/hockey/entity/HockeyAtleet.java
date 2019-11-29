@@ -8,11 +8,11 @@ import java.util.Date;
 
 @Data
 @Document(collection = "Atleet")
-public class Atleet {
+public class HockeyAtleet {
     @Id
     private String ID;
     private String Naam;
     private Date Geboortedatum;
-    private String PloegID;
-    private String PositieID;
+    private String Ploeg;
+    private String Positie;
 }
