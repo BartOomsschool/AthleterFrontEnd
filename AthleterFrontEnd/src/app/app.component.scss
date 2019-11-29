@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+$drk-blue-clr: #97D0CA;
+$white-clr: #534D56;
+$main-font: 'Roboto', sans-serif;
+
+body {
+  margin: 0;
+}
+
+header {
+  height: 3.5rem;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  color: $white-clr;
+  background: $drk-blue-clr;
+  display: grid;
+  grid-template-columns: auto auto;
+
+  .nav-display {
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+
+    svg {
+      height: 2rem;
+      margin-left: 3rem;
+    }
+
+    h1 {
+      font-family: $main-font;
+      font-weight: 600;
+      font-size: 1.5rem;
+      margin-left: 1.5rem;
+    }
+
+    .nav-toggle-label {
+      display: none;
+    }
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  nav {
+    ul {
+      list-style-type: none;
+      font-family: $main-font;
+      font-size: 1.2rem;
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-top: 12px;  
+
+      a {
+        text-decoration: none;
+        color: $white-clr;
+      }
+
+      a:visited {
+        color: $white-clr;
+      }
+
+      .voetbal-link, .badminton-link, .hockey-link, .volleybal-link  {
+        padding-right: 4rem;
+      }
+
+      a:hover, a:focus {
+        cursor: pointer;
+        border-bottom: 1px solid $white-clr;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  header {
+
+    .nav-display {
+      height: 3.5rem;
+      display: flex;
+      align-items: center;
+
+      svg {
+        height: 2rem;
+        margin-left: 2rem;
+      }
+
+      h1 {
+        font-family: $main-font;
+        font-weight: 600;
+        font-size: 1.5rem;
+        margin-left: 1rem;
+      }
+    }
+
+    nav {
+      ul {
+        margin-top: 12px;   
+
+        .voetbal-link, .badminton-link, .hockey-link, .volleybal-link  {
+          padding-right: 1.5rem;
+        }
+
+        a:hover, a:focus {
+          cursor: pointer;
+          border-bottom: 1px solid $white-clr;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  header {
+    
+    .nav-display {
+      width: 90vw;
+      margin: 0 5vw;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      svg {
+        height: 2rem;
+        margin: 0;
+      }
+
+      .nav-toggle-label {
+        display: block;
+        cursor: pointer;
+
+        span {
+          display: block;
+          height: 0.2rem;
+          width: 1.8rem;
+          border-radius: 3px;
+          background-color: $white-clr;
+          position: relative;
+        }
+
+        span::before {
+          content: '';
+          position: absolute;
+          display: block;
+          height: 0.2rem;
+          width: 1.8rem;
+          border-radius: 3px;
+          background-color: $white-clr;
+          left: 0;
+          top: -0.5rem;
+        }
+
+        span::after {
+          content: '';
+          position: absolute;
+          display: block;
+          height: 0.2rem;
+          width: 1.8rem;
+          border-radius: 3px;
+          background-color: $white-clr;
+          left: 0;
+          bottom: -0.5rem;
+        }
+      }
+    }
+
+    nav {
+      position: absolute;
+      width: 100%;
+      top: 100%;
+      left: 0;
+      background:$drk-blue-clr;
+      transform: scale(1, 0);
+      transform-origin: top;
+      transition: transform 0.4s ease-in-out;
+
+      ul {
+        display: block;
+        margin: 0;
+        padding: 0;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+
+        li {
+          margin-bottom: 1em;
+          margin-left: 1em;
+        }
+      }
+    }
+
+    .nav-toggle {
+      display: none;
+    }
+
+    .nav-toggle:checked ~ nav {
+      transform: scale(1, 1);
+    }
+
+    .nav-toggle:checked ~ nav ul {
+      opacity: 1;
+      transition: opacity 0.6s ease 0.2s;
+    }
+  }
+}
+
+main {
+  height: 200vh;
+  width: 100%;
+  background-color: $white-clr;
+  color: $drk-blue-clr;
+  font-family: $main-font;
+  
+  h1 {
+    padding: 4rem 1rem 1rem 1rem;
+  }
+  
+  p {
+    padding: 0 1rem 1rem 1rem;
+    line-height:1.5rem;
+  }
+  
+  .links {
+    display: flex;
+  }
+
+  a {
+    text-align: center;
+    text-decoration: none;
+    font-family: $main-font;
+    color: $drk-blue-clr;
+    font-size: 1.3rem;
+    margin: 0 1rem 1rem 1rem;
+  }
+}
+.container {
+    margin-top: 70px;
+}
+
+.imgnav{
+    height: 35px;
+    margin-left: 40px;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: $drk-blue-clr;
+    color: $white-clr;
+    text-align: center;
+}

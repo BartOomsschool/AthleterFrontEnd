@@ -92,4 +92,14 @@ public class VolleyballSpeler {
         this.positieId = positieId;
         this.teamId = teamId;
     }
+
+    public VolleyballSpeler(String naam, String lengteInCm, String selecties, String geboortedatum, String geslacht, String positieId, String teamId) {
+        this.naam = naam;
+        this.lengteInCm = lengteInCm;
+        this.selecties = selecties;
+        this.geboortedatum = geboortedatum;
+        this.geslacht = geslacht;
+        this.positieId = positieId;
+        this.teamId = teamId;
+    }
 }

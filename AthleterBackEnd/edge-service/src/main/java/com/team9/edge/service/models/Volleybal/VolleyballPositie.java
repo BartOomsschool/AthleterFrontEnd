@@ -31,6 +31,10 @@ public class VolleyballPositie {
         this.naam = naam;
     }
 
+    public VolleyballPositie(String naam) {
+        this.naam = naam;
+    }
+
     public VolleyballPositie() {
     }
 }
