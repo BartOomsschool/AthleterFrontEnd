@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatFormFieldModule, MatInputModule, MatButtonModule, MatSidenavModule, MatListModule  } from '@angular/material'; 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 
@@ -15,7 +16,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     MatSidenavModule,
     MatListModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserModule
   ],
   exports: [
     CommonModule,
@@ -25,7 +27,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     MatSidenavModule,
     MatListModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserModule
   ]
 })
 export class SharedModule { }

@@ -24,21 +24,11 @@ public class VoetbalAtleetController {
     @Autowired
     private ObjectMapper objectMapper;
 
-/*    @GetMapping("{teamID}")
-    public List<VoetbalAtleet> getSpelersByTeamID(@PathVariable("teamID") String teamID){
-        GenericResponseWrapper wrapper = restTemplate.getForObject("http://voetbal-service/spelers/search/findSpelerByTeamID?teamID=" + teamID, GenericResponseWrapper.class);
-
-        List<VoetbalAtleet> voetbalAtleets = objectMapper.convertValue(wrapper.get_embedded().get("spelers"), new TypeReference<List<VoetbalAtleet>>() { });
-
-*//*
-        List<Speler> returnList = new ArrayList<>();
-        for (Speler speler: spelers){
-            Speler test = restTemplate.getForObject("http://voetbal-service/spelers/" + speler.getId(), Speler.class);
-            returnList.add(test);
-        }
-*//*
-        return voetbalAtleets;
-    }*/
+    @GetMapping("getatleet/{voetbalAtleetID}")
+    public VoetbalAtleet getVoetbalAtleetByVoetbalAtleetID(@PathVariable("voetbalAtleetID") String voetbalAtleetID){
+        VoetbalAtleet voetbalAtleet = restTemplate.getForObject("http://voetbal-service/voetbalAtleets/search/findVoetbalAtleetByVoetbalAtleetID?voetbalAtleetID=" + voetbalAtleetID, VoetbalAtleet.class);
+        return voetbalAtleet;
+    }
 
     @GetMapping("getatleten")
     public List<VoetbalAtleet> getAtleten(){

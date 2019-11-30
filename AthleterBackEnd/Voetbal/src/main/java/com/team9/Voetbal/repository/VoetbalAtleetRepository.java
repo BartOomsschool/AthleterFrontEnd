@@ -8,4 +8,5 @@ import java.util.List;
 
 public interface VoetbalAtleetRepository extends MongoRepository<VoetbalAtleet, String>{
     List<VoetbalAtleet> getVoetbalAtleetByPositie(@Param("positie") String positie);
+    VoetbalAtleet findVoetbalAtleetByVoetbalAtleetID(@Param("voetbalAtleetID") String voetbalAtleetID);
 }

@@ -8,12 +8,14 @@ import { VoetbalComponent } from './views/voetbal/voetbal/voetbal.component';
 import { VoetbalAtleetToevoegenComponent } from './views/voetbal/voetbalatleet-toevoegen/voetbalatleet-toevoegen/voetbalatleet-toevoegen.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BadmintonModule } from './views/badminton/badminton.module';
+import { VoetbalatleetUpdatenComponent } from './views/voetbal/voetbalatleet-updaten/voetbalatleet-updaten/voetbalatleet-updaten.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VoetbalComponent,
     VoetbalAtleetToevoegenComponent,
+    VoetbalatleetUpdatenComponent
   ],
   imports: [
     BrowserModule,

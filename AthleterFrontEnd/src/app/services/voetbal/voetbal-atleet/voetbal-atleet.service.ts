@@ -14,6 +14,10 @@ export class VoetbalAtleetService {
       return this.http.get<VoetbalAtleet[]>("http://localhost:8050/voetbalAtleets/getatleten");
   }
 
+  getAtleet(voetbalAtleetID: string): Observable<VoetbalAtleet> {
+    return this.http.get<VoetbalAtleet>("http://localhost:8050/voetbalAtleets/getatleet/" + voetbalAtleetID);
+}
+
   addAtleet(voetbalAtleet: VoetbalAtleet) {
       return this.http.post<VoetbalAtleet>("http://localhost:8050/voetbalAtleets/postatleet", voetbalAtleet);
   }

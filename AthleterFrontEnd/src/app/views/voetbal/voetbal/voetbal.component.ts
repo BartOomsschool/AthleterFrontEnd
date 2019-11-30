@@ -15,18 +15,29 @@ export class VoetbalComponent implements OnInit {
 
    }
 
-    spelers: VoetbalAtleet[];
+    atleten: VoetbalAtleet[];
 
 
 
   getAtleten(){
     this._voetbalAtleetService.getAtleten().subscribe(result =>{
-      this.spelers = result;
-      console.log('Spelers: ', result);
+      this.atleten = result;
+      console.log('Atleten: ', result);
     });
   }
-  naarAtletenToevoegen() {
+  naarAtleetToevoegen() {
     this.router.navigate(['voetbalAtleetToevoegen']);
+  }
+
+  deleteAtleet(id: number){
+    this._voetbalAtleetService.deleteAtleet(id).subscribe(result =>{
+      console.log('deleted atleet:', result);
+      this.getAtleten();
+    });
+  }
+
+  updateAtleet(atleetID: string){
+    this.router.navigate(['voetbalAtleetUpdaten' , atleetID]);
   }
 
 

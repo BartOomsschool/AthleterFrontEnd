@@ -1,26 +1,11 @@
 <p>voetbal works!</p>
-<button (click)="getSpelers()">Vraag spelers op</button>
+<button (click)="getAtleten()">Vraag spelers op</button>
 <ul>
-    <li *ngFor="let s of (spelers)">
-        <p>{{s.naam}}</p>
-        <p> {{s.teamID}}</p>
-        <p> {{s.positieID}}</p>
-        <p>{{s.Geboortedatum}}</p>
+    <li *ngFor="let a of (atleten)">
+        <p>{{a.naam}} <button (click)="updateAtleet(a.voetbalAtleetID)">Update</button> | <button (click)="deleteAtleet(a.voetbalAtleetID)">Delete</button></p>
+        <p> {{a.team}}</p>
+        <p> {{a.positie}}</p>
     </li>
 </ul>
-<button (click)="getTeams()">Vraag teams op</button>
-<ul>
-    <li *ngFor="let t of (teams)">
-        <p>{{t.teamNaam}}</p>
-    </li>
-</ul>
-<button (click)="getPosities()">Vraag posities op</button>
-<ul>
-    <li *ngFor="let p of (posities)">
-        <p>{{p.number}}</p>
-    </li>
-</ul>
-<button (click)="naarSpelerToevoegen()">Speler Toevoegen</button> |
-<button (click)="naarVoetbalTeamToevoegen()">Team Toevoegen</button> |
-<button (click)="naarVoetbalPositieToevoegen()">Positie Toevoegen</button> |
+<button (click)="naarAtleetToevoegen()">Atleet Toevoegen</button> |
 <button (click)="naarHome()">Home</button>

@@ -1,4 +1,3 @@
 export class VoetbalAtleet {
-    constructor(public voetbalPositieID: string, public naam: string, public team: string, public positie: string){
-    }
+    constructor(public voetbalAtleetID: string, public naam: string, public team: string, public positie: string){ }
 }

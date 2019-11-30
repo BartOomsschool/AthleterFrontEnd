@@ -1,26 +1,19 @@
-<p>speler-toevoegen works!</p>
+<form [formGroup]="atleetToevoegenForm" (ngSubmit)="onSubmitAtleet()">
+    <p>
 
+        <input  type="text" formControlName="naam" placeholder="Naam" />
 
-<form [formGroup]="spelerToevoegenForm" (ngSubmit)="onSubmitSpeler()">
-    <p>
-        <mat-form-field>
-            <input matInput type="text" formControlName="Naam" placeholder="Naam" />
-        </mat-form-field>
     </p>
     <p>
-        <mat-form-field>
-            <input matInput type="text" formControlName="teamID" placeholder="teamID" />
-        </mat-form-field>
+
+        <input  type="text" formControlName="team" placeholder="Teamnaam" />
+
     </p>
     <p>
-        <mat-form-field>
-            <input matInput type="text" formControlName="positieID" placeholder="positieID" />
-        </mat-form-field>
+
+        <input  type="text" formControlName="positie" placeholder="positie atleet" />
+
     </p>
-    <p>
-        <mat-form-field>
-            <input matInput type="date" formControlName="Geboortedatum" placeholder="Geboortedatum" />
-        </mat-form-field>
-    </p>
-    <button mat-raised-button color="primary" type="submit" [disabled]="!spelerToevoegenForm.valid">Toevoegen</button>
+    <button  color="primary" type="submit" [disabled]="!atleetToevoegenForm.valid">Toevoegen atleet</button> | 
+    <button (click)="naarVoetbal()">Annuleren</button>
 </form>
