@@ -1,10 +1,11 @@
-
 <button (click)="getAtleten()">Vraag atleten op</button>
 <ul>
     <li *ngFor="let a of (atleten)">
-        <p>{{a.naam}} <button (click)="updateAtleet(a.voetbalAtleetID)">Update</button> | <button (click)="deleteAtleet(a.voetbalAtleetID)">Delete</button></p>
+        <p>{{a.naam}} <button (click)="updateAtleet(a.volleybalAtleetID)">Update</button> | <button (click)="deleteAtleet(a.volleybalAtleetID)">Delete</button></p>
         <p> {{a.team}}</p>
         <p> {{a.positie}}</p>
+        <p> {{a.lengteInCentimeter}}</p>
+        <p> {{a.geslacht}}</p>
     </li>
 </ul>
 <button (click)="naarAtleetToevoegen()">Atleet Toevoegen</button> |
