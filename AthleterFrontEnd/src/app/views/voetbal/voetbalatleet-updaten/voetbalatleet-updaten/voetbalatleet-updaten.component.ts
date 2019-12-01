@@ -13,8 +13,10 @@ import { VoetbalAtleet } from 'src/app/models/voetbal/voetbal-atleet/voetbal-atl
 export class VoetbalatleetUpdatenComponent implements OnInit {
 
   atleetID: string;
-  atleet: VoetbalAtleet = null;
   submitted: boolean = false;
+  naamAtleet: string;
+  positieAtleet: string;
+  teamAtleet: string;
 
   atleetUpdatenForm = this.fb.group({
     naam: ['', Validators.required],
@@ -29,7 +31,9 @@ export class VoetbalatleetUpdatenComponent implements OnInit {
   getAtleet(id: string){
     console.log('in functie getAtleet', id);
     this._voetbalAtleetService.getAtleet(id).subscribe(result => {
-        this.atleet = result;
+        this.naamAtleet = result.naam;
+        this.positieAtleet = result.positie;
+        this.teamAtleet = result.team;
         console.log('opgevraagde atleet', result);
     });
   }

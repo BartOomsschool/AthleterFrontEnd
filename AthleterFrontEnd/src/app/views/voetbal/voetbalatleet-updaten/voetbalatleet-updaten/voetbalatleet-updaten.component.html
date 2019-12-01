@@ -1,12 +1,12 @@
 <form [formGroup]="atleetUpdatenForm" (ngSubmit)="onSubmitUpdateAtleet()">
     <p>
-        <input type="text" formControlName="naam" placeholder="Naam" [(ngModel)]="atleet.naam" />
+        <input type="text" formControlName="naam" placeholder="Naam" [(ngModel)]="naamAtleet" />
     </p>
     <p>
-        <input type="text" formControlName="team" placeholder="Teamnaam" [(ngModel)]="atleet.team" />
+        <input type="text" formControlName="team" placeholder="Teamnaam" [(ngModel)]="teamAtleet" />
     </p>
     <p>
-        <input type="text" formControlName="positie" placeholder="positie atleet" [(ngModel)]="atleet.positie" />
+        <input type="text" formControlName="positie" placeholder="positie atleet" [(ngModel)]="positieAtleet" />
     </p>
     <button color="primary" type="submit">Update atleet</button>
 </form>
