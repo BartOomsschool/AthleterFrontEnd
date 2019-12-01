@@ -9,13 +9,15 @@ import { VoetbalAtleetToevoegenComponent } from './views/voetbal/voetbalatleet-t
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BadmintonModule } from './views/badminton/badminton.module';
 import { VoetbalatleetUpdatenComponent } from './views/voetbal/voetbalatleet-updaten/voetbalatleet-updaten/voetbalatleet-updaten.component';
+import { HockeyComponent } from './views/hockey/hockey/hockey.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VoetbalComponent,
     VoetbalAtleetToevoegenComponent,
-    VoetbalatleetUpdatenComponent
+    VoetbalatleetUpdatenComponent,
+    HockeyComponent
   ],
   imports: [
     BrowserModule,

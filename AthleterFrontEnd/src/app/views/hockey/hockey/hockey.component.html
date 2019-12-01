@@ -1,0 +1,18 @@
+<table class="table">
+    <tr>
+        <th>Naam</th>
+        <th>Team</th>
+        <th>Positie</th>
+        <th>Acties</th>
+    </tr>
+    <tr *ngFor="let a of (atleten)">
+        <td>{{a.naam}}</td>
+        <td>{{a.ploeg}}</td>
+        <td>{{a.positie}}</td>
+        <td><button (click)="updateAtleet(a.hockeyAtleetID)">Update</button> | <button
+                (click)="deleteAtleet(a.hockeyAtleetID)">Delete</button></td>
+    </tr>
+</table>
+
+<button (click)="naarHockeyAtleetToevoegen()">Atleet Toevoegen</button> |
+<button (click)="naarHome()">Home</button>

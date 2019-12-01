@@ -4,12 +4,14 @@ import { VoetbalComponent } from './views/voetbal/voetbal/voetbal.component';
 import { VoetbalAtleetToevoegenComponent } from './views/voetbal/voetbalatleet-toevoegen/voetbalatleet-toevoegen/voetbalatleet-toevoegen.component';
 import { BadmintonComponent } from './views/badminton/badminton/badminton.component';
 import { VoetbalatleetUpdatenComponent } from './views/voetbal/voetbalatleet-updaten/voetbalatleet-updaten/voetbalatleet-updaten.component';
+import { HockeyComponent } from './views/hockey/hockey/hockey.component';
 
 const appRoutes: Routes = [
   { path: 'voetbal', component: VoetbalComponent },
   { path: 'voetbalAtleetToevoegen', component: VoetbalAtleetToevoegenComponent },
   { path: 'badminton', component: BadmintonComponent },
-  { path: 'voetbalAtleetUpdaten/:id', component: VoetbalatleetUpdatenComponent }
+  { path: 'voetbalAtleetUpdaten/:id', component: VoetbalatleetUpdatenComponent },
+  { path: 'hockey', component: HockeyComponent}
   
 
 ];
