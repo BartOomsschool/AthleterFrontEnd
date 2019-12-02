@@ -29,6 +29,12 @@ public class BadmintonatleetController {
         return atleten;
     }
 
+    @GetMapping("getBadmintonatleet/{badmintonatleetID}")
+    public Badmintonatleet getVoetbalAtleetByVoetbalAtleetID(@PathVariable("badmintonatleetID") String atleetID){
+        Badmintonatleet voetbalAtleet = restTemplate.getForObject("http://badminton-service/badmintonatleets/" + atleetID, Badmintonatleet.class);
+        return voetbalAtleet;
+    }
+
     @PostMapping("/postBadmintonatleet")
     public ResponseEntity<String> postBadmintonatleet(@RequestBody Badmintonatleet atleetPost){
 
@@ -40,6 +46,18 @@ public class BadmintonatleetController {
                 "http://badminton-service/badmintonatleets/", atleet, String.class
         );
 
+        return ResponseEntity.ok().build();
+    }
+
+    @PutMapping("/putBadmintonatleet")
+    public ResponseEntity<String> putSpeler(@RequestBody Badmintonatleet atleet){
+        restTemplate.put("http://badminton-service/badmintonatleets/" + atleet.getAtleetID(), atleet, String.class);
+        return ResponseEntity.ok().build();
+    }
+
+    @DeleteMapping("/deleteBadmintonatleet/{badmintonatleetID}")
+    public ResponseEntity deleteTeam(@PathVariable("badmintonatleetID") String badmintonatleetID) {
+        restTemplate.delete("http://badminton-service/badmintonatleets/" + badmintonatleetID);
         return ResponseEntity.ok().build();
     }
 }
