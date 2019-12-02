@@ -5,23 +5,25 @@ import lombok.Data;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Athleet {
-    private int athleetID;
-    private Integer categorieID;
-    private Integer landID;
+public class Badmintonatleet {
+    private int atleetID;
+    private String categorie;
+    private int rank;
+    private String land;
     private String naam;
     private int punten;
     private int toernooien;
     private String afbeelding;
     private Integer partnerID;
 
-    public Athleet() {
+    public Badmintonatleet() {
     }
 
-    public Athleet(int athleetID, Integer categorieID, Integer landID, String naam, int punten, int toernooien, String afbeelding, Integer partnerID) {
-        this.athleetID = athleetID;
-        this.categorieID = categorieID;
-        this.landID = landID;
+    public Badmintonatleet(int atleetID, String categorie, int rank, String land, String naam, int punten, int toernooien, String afbeelding, Integer partnerID) {
+        this.atleetID = atleetID;
+        this.categorie = categorie;
+        this.rank = rank;
+        this.land = land;
         this.naam = naam;
         this.punten = punten;
         this.toernooien = toernooien;
@@ -29,28 +31,36 @@ public class Athleet {
         this.partnerID = partnerID;
     }
 
-    public int getAthleetID() {
-        return athleetID;
+    public int getAtleetID() {
+        return atleetID;
     }
 
-    public void setAthleetID(int athleetID) {
-        this.athleetID = athleetID;
+    public void setAtleetID(int atleetID) {
+        this.atleetID = atleetID;
     }
 
-    public Integer getCategorieID() {
-        return categorieID;
+    public String getCategorie() {
+        return categorie;
     }
 
-    public void setCategorieID(Integer categorieID) {
-        this.categorieID = categorieID;
+    public void setCategorie(String categorie) {
+        this.categorie = categorie;
     }
 
-    public Integer getLandID() {
-        return landID;
+    public int getRank() {
+        return rank;
     }
 
-    public void setLandID(Integer landID) {
-        this.landID = landID;
+    public void setRank(int rank) {
+        this.rank = rank;
+    }
+
+    public String getLand() {
+        return land;
+    }
+
+    public void setLand(String land) {
+        this.land = land;
     }
 
     public String getNaam() {

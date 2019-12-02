@@ -6,45 +6,36 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Entity
-@Table(name="Athleet")
+@Table(name="badmintonatleet")
 @Data
 @NoArgsConstructor
-public class Athleet {
+public class Badmintonatleet {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    @Column(name="athleetID")
-    private int athleetID;
+    @Column(name="atleetID")
+    private int atleetID;
 
-    @Column (name="categorieID")
-    private int categorieID;
-
-    /*@ManyToOne
-    @JoinColumn(name="categorieID")
-    private Categorie categorie;*/
+    @Column (name="categorie")
+    private String categorie;
 
     @Column (name="rank")
     private int rank;
 
-    @Column (name="landID")
-    private int landID;
-
-    /*@ManyToOne
-    @JoinColumn(name="landID")
-    private Land land;*/
+    @Column (name="land")
+    private String land;
 
     @Column (name="naam")
     private String naam;
+
     @Column (name="punten")
     private int punten;
+
     @Column (name="toernooien")
     private int toernooien;
+
     @Column (name="afbeelding")
     private String afbeelding;
 
     @Column (name="partnerID")
     private Integer partnerID;
-
-    /*@ManyToOne
-    @JoinColumn(name="partnerID")
-    private Athleet partner;*/
 }
