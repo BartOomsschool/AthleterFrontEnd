@@ -8,6 +8,8 @@ import { VolleybalatleetToevoegenComponent } from './views/volleybal/volleybalat
 import { VolleybalatleetUpdatenComponent } from './views/volleybal/volleybalatleet-updaten/volleybalatleet-updaten/volleybalatleet-updaten.component';
 import { VolleybalComponent } from './views/volleybal/volleybal/volleybal.component';
 import { HockeyComponent } from './views/hockey/hockey/hockey.component';
+import { HockeyatleetToevoegenComponent } from './views/hockey/hockeyatleet-toevoegen/hockeyatleet-toevoegen.component';
+import { HockeyatleetUpdatenComponent } from './views/hockey/hockeyatleet-updaten/hockeyatleet-updaten.component';
 import { BadmintonBeherenComponent } from './views/badminton/beheren/badminton-beheren.component';
 
 const appRoutes: Routes = [
@@ -19,10 +21,9 @@ const appRoutes: Routes = [
   { path: 'volleybal', component: VolleybalComponent },
   { path: 'volleybalAtleetToevoegen', component: VolleybalatleetToevoegenComponent },
   { path: 'volleybalAtleetUpdaten/:id', component: VolleybalatleetUpdatenComponent },
-  { path: 'hockey', component: HockeyComponent}
-
-  
-
+  { path: 'hockey', component: HockeyComponent},
+  { path: 'hockeyAtleetToevoegen', component: HockeyatleetToevoegenComponent},
+  { path: 'hockeyAtleetUpdaten/:id', component: HockeyatleetUpdatenComponent}
 ];
 
 @NgModule({

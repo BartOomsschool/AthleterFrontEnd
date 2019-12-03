@@ -1,0 +1,16 @@
+<form [formGroup]="hockeyAtleetToevoegenForm" (ngSubmit)="onSubmitHockeyAtleet()">
+    <p>
+        <label for="naam">Naam: </label>
+        <input id="naam" type="text" formControlName="naam" />
+    </p>
+    <p>
+        <label for="ploeg">Ploeg: </label>
+        <input id="ploeg" type="text" formControlName="ploeg" />
+    </p>
+    <p>
+        <label for="positie">Positie: </label>
+        <input id="positie" type="text" formControlName="positie" />
+    </p>
+    <button color="primary"type="submit">Toevoegen</button> |
+    <button  (click)="naarHockey()">Annuleren</button>
+</form>

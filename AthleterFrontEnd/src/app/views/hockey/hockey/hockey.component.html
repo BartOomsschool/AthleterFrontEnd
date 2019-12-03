@@ -9,10 +9,9 @@
         <td>{{a.naam}}</td>
         <td>{{a.ploeg}}</td>
         <td>{{a.positie}}</td>
-        <td><button (click)="updateAtleet(a.hockeyAtleetID)">Update</button> | <button
-                (click)="deleteAtleet(a.hockeyAtleetID)">Delete</button></td>
+        <td><button (click)="updateHockeyAtleet(a.id)">Update</button> | <button
+                (click)="deleteHockeyAtleet(a.id)">Delete</button></td>
     </tr>
 </table>
-
 <button (click)="naarHockeyAtleetToevoegen()">Atleet Toevoegen</button> |
 <button (click)="naarHome()">Home</button>

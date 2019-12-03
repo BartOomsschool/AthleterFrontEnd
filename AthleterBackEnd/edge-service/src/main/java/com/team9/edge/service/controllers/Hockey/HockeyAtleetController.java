@@ -20,12 +20,13 @@ public class HockeyAtleetController {
     private RestTemplate restTemplate;
     @Autowired
     private ObjectMapper objectMapper;
-//    @GetMapping("{ploeg}")
-//    public List<HockeyAtleet> getAtleetByPloegID(@PathVariable("ploeg")  String ploeg){
-//        GenericResponseWrapper wrapper = restTemplate.getForObject("http://hockey-service/hockeyAtleets/search/findAtleetByPloegID?PloegID=" + ploeg, GenericResponseWrapper.class);
-//        List<HockeyAtleet> spelers  = objectMapper.convertValue(wrapper.get_embedded().get("hockeyAtleets"), new TypeReference<List<HockeyAtleet>>() { });
-//        return spelers;
-//    }
+
+    @GetMapping("getatleet/{ID}")
+    public HockeyAtleet getAtleet(@PathVariable("voetbalAtleetID") String voetbalAtleetID){
+        HockeyAtleet speler = restTemplate.getForObject("http://hockey-service/hockeyAtleets/search/findAtleet?ID=" + voetbalAtleetID, HockeyAtleet.class);
+        return speler;
+    }
+
     @GetMapping("getAtleten")
     public List<HockeyAtleet> getAtleten(){
         GenericResponseWrapper wrapper = restTemplate.getForObject("http://hockey-service/hockeyAtleets/", GenericResponseWrapper.class);
