@@ -13,6 +13,9 @@ import { VolleybalComponent } from './views/volleybal/volleybal/volleybal.compon
 import { VolleybalatleetToevoegenComponent } from './views/volleybal/volleybalatleet-toevoegen/volleybalatleet-toevoegen/volleybalatleet-toevoegen.component';
 import { VolleybalatleetUpdatenComponent } from './views/volleybal/volleybalatleet-updaten/volleybalatleet-updaten/volleybalatleet-updaten.component';
 import { HockeyComponent } from './views/hockey/hockey/hockey.component';
+import { HockeyModule } from './views/hockey/hockey.module';
+import { HockeyatleetToevoegenComponent } from './views/hockey/hockeyatleet-toevoegen/hockeyatleet-toevoegen.component';
+import { HockeyatleetUpdatenComponent } from './views/hockey/hockeyatleet-updaten/hockeyatleet-updaten.component';
 
 
 @NgModule({
@@ -24,7 +27,9 @@ import { HockeyComponent } from './views/hockey/hockey/hockey.component';
     VolleybalComponent,
     VolleybalatleetToevoegenComponent,
     VolleybalatleetUpdatenComponent,
-    HockeyComponent
+    HockeyComponent,
+    HockeyatleetToevoegenComponent,
+    HockeyatleetUpdatenComponent
   ],
   imports: [
     BrowserModule,
