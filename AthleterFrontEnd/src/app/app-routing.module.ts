@@ -8,12 +8,14 @@ import { VolleybalatleetToevoegenComponent } from './views/volleybal/volleybalat
 import { VolleybalatleetUpdatenComponent } from './views/volleybal/volleybalatleet-updaten/volleybalatleet-updaten/volleybalatleet-updaten.component';
 import { VolleybalComponent } from './views/volleybal/volleybal/volleybal.component';
 import { HockeyComponent } from './views/hockey/hockey/hockey.component';
+import { BadmintonBeherenComponent } from './views/badminton/beheren/badminton-beheren.component';
 
 const appRoutes: Routes = [
   { path: 'voetbal', component: VoetbalComponent },
   { path: 'voetbalAtleetToevoegen', component: VoetbalAtleetToevoegenComponent },
   { path: 'voetbalAtleetUpdaten/:id', component: VoetbalatleetUpdatenComponent },
   { path: 'badminton', component: BadmintonComponent },
+  { path: 'badmintonBeheren', component: BadmintonBeherenComponent },
   { path: 'volleybal', component: VolleybalComponent },
   { path: 'volleybalAtleetToevoegen', component: VolleybalatleetToevoegenComponent },
   { path: 'volleybalAtleetUpdaten/:id', component: VolleybalatleetUpdatenComponent },
