@@ -1,6 +1,22 @@
-<p>badminton works!</p>
-<ul>
-    <li *ngFor="let a of athleten">{{a.naam}}</li>
-</ul>
+<h1>Badminton</h1>
 
-<button (click)="naarHome()">Home</button>
+<div class="row justify-content-center">
+    <div class="card col-3" *ngFor="let atleet of atleten">
+        <img src="assets/img/badminton/{{atleet.afbeelding}}" class="card-img-top" alt="{{atleet.naam}}">
+        <div class="card-body">
+            <h2>{{atleet.naam}}</h2>
+            <p id="firstItem"><i class="fas fa-layer-group"></i> Categorie: <span>{{atleet.categorie}}</span></p>
+            <p><i class="fas fa-award"></i> Rank: <span>{{atleet.rank}}</span></p>
+            <hr/>
+            <p><i class="fas fa-globe"></i> Land: <span>{{atleet.land}}</span></p>
+            <hr/>
+            <p><i class="fas fa-star"></i> Punten: <span>{{atleet.punten}}</span></p>
+            <p><i class="fas fa-trophy"></i> Toernooien: <span>{{atleet.toernooien}}</span></p>
+            <hr/>
+            <p *ngIf="atleet.partnerID"><i class="fas fa-user-friends"></i> Partner: <span>{{atleten[atleet.partnerID-1].naam}}</span></p>
+            <hr *ngIf="atleet.partnerID"/>
+        </div>
+    </div>
+</div>
+
+<button class="button button--nuka" [routerLink]="['/badmintonBeheren']" routerLinkActive="router-link-active" >Badminton beheren</button>

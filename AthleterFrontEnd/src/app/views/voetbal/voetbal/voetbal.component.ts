@@ -12,7 +12,7 @@ export class VoetbalComponent implements OnInit {
 
   constructor(private _voetbalAtleetService: VoetbalAtleetService, private router: Router)
    {
-
+      this.getAtleten();
    }
 
     atleten: VoetbalAtleet[];

@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-$drk-blue-clr: #97D0CA;
-$white-clr: #534D56;
+
+$dark-clr: #534D56;
+$accent-clr: #1B998B;
+$light-accent-clr: #97D0CA;
+$background-clr: #EFEEEF;
+
 $main-font: 'Roboto', sans-serif;
 
 body {
@@ -13,8 +17,8 @@ header {
   position: fixed;
   top: 0;
   z-index: 2;
-  color: $white-clr;
-  background: $drk-blue-clr;
+  color: $dark-clr;
+  background: $light-accent-clr;
   display: grid;
   grid-template-columns: auto auto;
 
@@ -57,11 +61,11 @@ header {
 
       a {
         text-decoration: none;
-        color: $white-clr;
+        color: $dark-clr;
       }
 
       a:visited {
-        color: $white-clr;
+        color: $dark-clr;
       }
 
       .voetbal-link, .badminton-link, .hockey-link, .volleybal-link  {
@@ -70,7 +74,7 @@ header {
 
       a:hover, a:focus {
         cursor: pointer;
-        border-bottom: 1px solid $white-clr;
+        border-bottom: 1px solid $dark-clr;
       }
     }
   }
@@ -107,7 +111,7 @@ header {
 
         a:hover, a:focus {
           cursor: pointer;
-          border-bottom: 1px solid $white-clr;
+          border-bottom: 1px solid $dark-clr;
         }
       }
     }
@@ -139,7 +143,7 @@ header {
           height: 0.2rem;
           width: 1.8rem;
           border-radius: 3px;
-          background-color: $white-clr;
+          background-color: $dark-clr;
           position: relative;
         }
 
@@ -150,7 +154,7 @@ header {
           height: 0.2rem;
           width: 1.8rem;
           border-radius: 3px;
-          background-color: $white-clr;
+          background-color: $dark-clr;
           left: 0;
           top: -0.5rem;
         }
@@ -162,7 +166,7 @@ header {
           height: 0.2rem;
           width: 1.8rem;
           border-radius: 3px;
-          background-color: $white-clr;
+          background-color: $dark-clr;
           left: 0;
           bottom: -0.5rem;
         }
@@ -174,7 +178,7 @@ header {
       width: 100%;
       top: 100%;
       left: 0;
-      background:$drk-blue-clr;
+      background:$light-accent-clr;
       transform: scale(1, 0);
       transform-origin: top;
       transition: transform 0.4s ease-in-out;
@@ -211,8 +215,8 @@ header {
 main {
   height: 200vh;
   width: 100%;
-  background-color: $white-clr;
-  color: $drk-blue-clr;
+  background-color: $dark-clr;
+  color: $light-accent-clr;
   font-family: $main-font;
   
   h1 {
@@ -232,13 +236,15 @@ main {
     text-align: center;
     text-decoration: none;
     font-family: $main-font;
-    color: $drk-blue-clr;
+    color: $light-accent-clr;
     font-size: 1.3rem;
     margin: 0 1rem 1rem 1rem;
   }
 }
 .container {
     margin-top: 70px;
+    min-height: 87vh;
+    margin-bottom: 30px;
 }
 
 .imgnav{
@@ -246,11 +252,8 @@ main {
     margin-left: 40px;
 }
 .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
     width: 100%;
-    background: $drk-blue-clr;
-    color: $white-clr;
+    background: $light-accent-clr;
+    color: $dark-clr;
     text-align: center;
 }

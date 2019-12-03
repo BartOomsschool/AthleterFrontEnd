@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AthleetService } from 'src/app/services/badminton/athleet/athleet.service';
+import { BadmintonAtleetService } from 'src/app/services/badminton/badminton-atleet/badminton-atleet.service';
 import { Router } from '@angular/router';
-import { Athleet } from 'src/app/models/badminton/athleet/athleet.model';
+import { BadmintonAtleet } from '../../../models/badminton/badminton-atleet/badminton-atleet.model';
 
 @Component({
   selector: 'app-badminton',
@@ -10,20 +10,16 @@ import { Athleet } from 'src/app/models/badminton/athleet/athleet.model';
 })
 export class BadmintonComponent implements OnInit {
 
-  athleten: Athleet[];
+  atleten: BadmintonAtleet[];
 
-  constructor(private _athleetService: AthleetService , private router: Router) {
-    this.getAthleten();
+  constructor(private _badmintonAtleetService: BadmintonAtleetService , private router: Router) {
+    this.getAtleten();
   }
 
-  getAthleten(){
-    this._athleetService.getAthleten().subscribe(result =>{
-      this.athleten = result;
+  getAtleten(){
+    this._badmintonAtleetService.getBadmintonAtleten().subscribe(result =>{
+      this.atleten = result;
     });
-  }
-
-  naarHome() {
-    this.router.navigate(['/']);
   }
 
   ngOnInit() {

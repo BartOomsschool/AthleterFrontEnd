@@ -1,5 +1,3 @@
-
-<button (click)="getAtleten()">Vraag atleten op</button>
 <ul>
     <li *ngFor="let a of (atleten)">
         <p>{{a.naam}} <button (click)="updateAtleet(a.voetbalAtleetID)">Update</button> | <button (click)="deleteAtleet(a.voetbalAtleetID)">Delete</button></p>

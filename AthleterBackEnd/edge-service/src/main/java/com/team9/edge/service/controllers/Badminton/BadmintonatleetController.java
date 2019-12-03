@@ -50,13 +50,13 @@ public class BadmintonatleetController {
     }
 
     @PutMapping("/putBadmintonatleet")
-    public ResponseEntity<String> putSpeler(@RequestBody Badmintonatleet atleet){
+    public ResponseEntity<String> putBadmintonatleet(@RequestBody Badmintonatleet atleet){
         restTemplate.put("http://badminton-service/badmintonatleets/" + atleet.getAtleetID(), atleet, String.class);
         return ResponseEntity.ok().build();
     }
 
     @DeleteMapping("/deleteBadmintonatleet/{badmintonatleetID}")
-    public ResponseEntity deleteTeam(@PathVariable("badmintonatleetID") String badmintonatleetID) {
+    public ResponseEntity deleteBadmintonatleet(@PathVariable("badmintonatleetID") String badmintonatleetID) {
         restTemplate.delete("http://badminton-service/badmintonatleets/" + badmintonatleetID);
         return ResponseEntity.ok().build();
     }
