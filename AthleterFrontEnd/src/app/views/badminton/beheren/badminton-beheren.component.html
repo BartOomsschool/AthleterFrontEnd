@@ -1,1 +1,70 @@
-<p>badminton-beheren works!</p>
+<h1>Badminton beheren</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Naam</th>
+      <th scope="col">Categorie</th>
+      <th scope="col">Rank</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let atleet of atleten">
+      <th scope="row">{{atleet.atleetID}}</th>
+      <td>{{atleet.naam}}</td>
+      <td>{{atleet.categorie}}</td>
+      <td>{{atleet.rank}}</td>
+      <td>
+        <button type="button" class="btn btn-warning knop"(click)="updateAtleet(atleet)"><i class="fas fa-edit"></i></button>
+        <button type="button" class="btn btn-danger knop" (click)="deleteAtleet(atleet.atleetID)"><i class="fas fa-trash-alt"></i></button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<button class="button button--nuka" (click)="toevoegenPopup()">Atleet toevoegen</button>
+
+<div class="popupBox" *ngIf="popup">
+    <div class="popup">
+        <div (click)="closePopup()" id="close"><i class="fas fa-times fa-2x exitIcon"></i></div>
+        <h1>Atleet toevoegen</h1>
+        <form #atleetForm="ngForm"  (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="naam">Naam</label>
+                <input type="text" class="form-control" id="naam" [(ngModel)]="atleet.naam" name="atleetform1" required>
+            </div>
+            <div class="form-group">
+                <label for="categorie">Categorie</label>
+                <input type="text" class="form-control" id="categorie" [(ngModel)]="atleet.categorie"  name="atleetform2" required>
+            </div>
+            <div class="form-group">
+                <label for="land">Land</label>
+                <input type="text" class="form-control" id="land" [(ngModel)]="atleet.land"  name="atleetform3" required>
+            </div>
+            <div class="row">
+                <div class="form-group col-4">
+                    <label for="rank">Rank</label>
+                    <input type="number" class="form-control" id="rank" [(ngModel)]="atleet.rank"  name="atleetform4" required>
+                </div>
+                <div class="form-group col-4">
+                    <label for="punten">Punten</label>
+                    <input type="number" class="form-control" id="punten" [(ngModel)]="atleet.punten"  name="atleetform5" required>
+                </div>
+                <div class="form-group col-4">
+                    <label for="toernooien">Toernooien</label>
+                    <input type="number" class="form-control" id="toernooien" [(ngModel)]="atleet.toernooien"  name="atleetform6">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="partner">Partner</label>
+                <select class="custom-select" id="partner" [(ngModel)]="atleet.partnerID" name="atleetform7">
+                    <option [ngValue]="null" selected>-- Geen partner --</option>
+                    <option *ngFor="let atleet of atleten" [ngValue]="atleet.atleetID">{{atleet.naam}}</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary submitKnop">Toevoegen</button>
+        </form>
+    </div>
+</div>

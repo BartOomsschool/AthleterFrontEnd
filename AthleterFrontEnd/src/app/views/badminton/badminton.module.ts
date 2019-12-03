@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { BadmintonComponent } from './badminton/badminton.component';
 import { BadmintonBeherenComponent } from './beheren/badminton-beheren.component';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -10,7 +11,8 @@ import { RouterModule } from '@angular/router';
   declarations: [BadmintonBeherenComponent, BadmintonComponent, BadmintonBeherenComponent],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ]
 })
 export class BadmintonModule { }
