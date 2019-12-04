@@ -1,0 +1,80 @@
+  /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+$dark-clr: #534D56;
+$accent-clr: #1B998B;
+$light-accent-clr: #97D0CA;
+$background-clr: #EFEEEF;
+
+$main-font: 'Roboto', sans-serif;
+  
+  svg {
+    width: 80vw;
+    margin: auto;
+  }
+  
+  .logo {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+
+    path {
+        stroke: $dark-clr;
+        fill: $dark-clr;
+        stroke-dasharray: 1800;
+        opacity: 10;
+        animation: animateDark 3s cubic-bezier(.42,.06,.55,.9);
+    }
+
+    polygon {
+        stroke: $accent-clr;
+        fill: $accent-clr;
+        stroke-dasharray: 1800;
+        opacity: 10;
+        animation: animateAccent 3s cubic-bezier(.42,.06,.55,.9); 
+    }
+  }
+  
+  @keyframes animateDark{
+    0% {
+      opacity: 0;
+      fill: none;
+      stroke-dashoffset: 1800;
+    }
+    30%{
+      opacity: 10;
+      fill: none;
+      stroke-dashoffset: 1800;
+    }
+    90%{
+      fill: $background-clr;
+    }
+    100% {
+      opacity: 10;
+      fill: $dark-clr;
+      stroke-dashoffset: 0;   
+    }
+  }
+  
+  @keyframes animateAccent{
+    0% {
+      opacity: 0;
+      fill: none;
+      stroke-dashoffset: 1800;
+    }
+    30%{
+      opacity: 10;
+      fill: none;
+      stroke-dashoffset: 1800;
+    }
+    90%{
+      fill: $background-clr;
+    }
+    100% {
+      opacity: 10;
+      fill: $accent-clr;
+      stroke-dashoffset: 0;    
+    }
+  }

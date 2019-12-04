@@ -31,7 +31,8 @@ table {
 
     tbody{
         th, td{
-            vertical-align: middle;
+            vertical-align: middle !important;
+            color: $dark-clr;
         }
 
         tr:nth-child(even){
