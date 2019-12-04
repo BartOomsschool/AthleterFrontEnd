@@ -1,0 +1,43 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Naam</th>
+            <th>Team</th>
+            <th>Positie</th>
+            <th>Acties</th>
+        </tr>
+    </thead>
+
+    <tr *ngFor="let a of (atleten)">
+        <td>{{a.naam}}</td>
+        <td>{{a.ploeg}}</td>
+        <td>{{a.positie}}</td>
+        <td>
+            <button type="button" class="btn btn-warning knop" (click)="updateHockeyAtleet(a)"><i
+                    class="fas fa-edit"></i></button>
+            <button type="button" class="btn btn-danger knop" (click)="deleteHockeyAtleet(a.id)"><i
+                    class="fas fa-trash-alt"></i></button></td>
+    </tr>
+</table>
+<button class="button button--nuka" (click)="toevoegenPopup()">Atleet toevoegen</button>
+<div class="popupBox" *ngIf="popup">
+        <div class="popup">
+            <div (click)="closePopup()" id="close"><i class="fas fa-times fa-2x exitIcon"></i></div>
+            <h1>Atleet toevoegen</h1>
+            <form #atleetForm="ngForm"  (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label for="naam">Naam</label>
+                    <input type="text" class="form-control" id="naam" [(ngModel)]="atleet.naam" name="atleetform1" required>
+                </div>
+                <div class="form-group">
+                    <label for="team">Team</label>
+                    <input type="text" class="form-control" id="team" [(ngModel)]="atleet.ploeg"  name="atleetform2" required>
+                </div>
+                <div class="form-group">
+                    <label for="positie">Positie</label>
+                    <input type="text" class="form-control" id="positie" [(ngModel)]="atleet.positie"  name="atleetform3" required>
+                </div>
+                <button type="submit" class="btn btn-primary submitKnop">Toevoegen</button>
+            </form>
+        </div>
+    </div>

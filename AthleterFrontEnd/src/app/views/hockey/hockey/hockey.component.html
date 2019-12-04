@@ -1,17 +1,12 @@
-<table class="table">
-    <tr>
-        <th>Naam</th>
-        <th>Team</th>
-        <th>Positie</th>
-        <th>Acties</th>
-    </tr>
-    <tr *ngFor="let a of (atleten)">
-        <td>{{a.naam}}</td>
-        <td>{{a.ploeg}}</td>
-        <td>{{a.positie}}</td>
-        <td><button (click)="updateHockeyAtleet(a.id)">Update</button> | <button
-                (click)="deleteHockeyAtleet(a.id)">Delete</button></td>
-    </tr>
-</table>
-<button (click)="naarHockeyAtleetToevoegen()">Atleet Toevoegen</button> |
-<button (click)="naarHome()">Home</button>
+<div class="row justify-content-center">
+    <div class="card col-3" *ngFor="let atleet of atleten">
+        <img src="assets/img/badminton/noImage.jpg" class="card-img-top">
+        <div class="card-body">
+            <h2>{{atleet.naam}}</h2>
+            <p id="firstItem"><i class="fas fa-layer-group"></i> Team: <span>{{atleet.ploeg}}</span></p>
+            <p id="firstItem"><i class="fas fa-futbol"></i> Positie: <span>{{atleet.positie}}</span></p>
+        </div>
+    </div>
+</div>
+<button class="button button--nuka" [routerLink]="['/hockeyBeheren']" routerLinkActive="router-link-active">Hockey
+    beheren</button>

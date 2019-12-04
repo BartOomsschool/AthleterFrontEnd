@@ -11,7 +11,6 @@ import { HockeyAtleetService } from 'src/app/services/hockey/hockey-atleet/hocke
 export class HockeyatleetUpdatenComponent implements OnInit {
 
   ID: string;
-  submitted: boolean = false;
   naam: string;
   positie: string;
   ploeg: string;
@@ -40,11 +39,11 @@ export class HockeyatleetUpdatenComponent implements OnInit {
     });
   }
 
-  // onSubmitUpdateAtleet() {
-  //   this.hockeyAtleetUpdatenForm.addControl('voetbalAtleetID', new FormControl(this.ID));
-  //   this.submitted = true;
-  //   this._hockeyService.updateAtleet(this.hockeyAtleetUpdatenForm.value).subscribe(result => {
-  //     this.router.navigate(['hockey']);
-  //   });
-  // }
+  onSubmitUpdateAtleet() {
+    this.hockeyAtleetUpdatenForm.addControl('id', new FormControl(this.ID));
+    console.log(this.hockeyAtleetUpdatenForm.value);
+    this._hockeyService.updateHockeyAtleet(this.hockeyAtleetUpdatenForm.value).subscribe(result => {
+      this.router.navigate(['hockey']);
+    });
+  }
 }

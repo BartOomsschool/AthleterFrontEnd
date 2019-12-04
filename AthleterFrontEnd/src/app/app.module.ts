@@ -11,6 +11,7 @@ import { VolleybalComponent } from './views/volleybal/volleybal/volleybal.compon
 import { HockeyComponent } from './views/hockey/hockey/hockey.component';
 import { HockeyatleetToevoegenComponent } from './views/hockey/hockeyatleet-toevoegen/hockeyatleet-toevoegen.component';
 import { HockeyatleetUpdatenComponent } from './views/hockey/hockeyatleet-updaten/hockeyatleet-updaten.component';
+import { HockeyatleetBeherenComponent } from './views/hockey/hockeyatleet-beheren/hockeyatleet-beheren.component';
 import { VoetbalatleetBeherenComponent } from './views/voetbal/voetbalatleet-beheren/voetbalatleet-beheren/voetbalatleet-beheren.component';
 import { HomeModule } from './views/home/home.module';
 import { VolleybalatleetBeherenComponent } from './views/volleybal/volleybalatleet-beheren/volleybalatleet-beheren/volleybalatleet-beheren.component';
@@ -23,6 +24,7 @@ import { VolleybalatleetBeherenComponent } from './views/volleybal/volleybalatle
     HockeyComponent,
     HockeyatleetToevoegenComponent,
     HockeyatleetUpdatenComponent,
+    HockeyatleetBeherenComponent,
     VoetbalatleetBeherenComponent,
     VolleybalatleetBeherenComponent
   ],

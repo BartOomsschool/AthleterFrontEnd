@@ -8,6 +8,7 @@ import java.util.List;
 
 public interface HockeyAtleetRepository extends MongoRepository<HockeyAtleet, String> {
     List<HockeyAtleet> findHockeyAtleetByPloeg(@Param("ploeg") String ploeg);
+    HockeyAtleet findAtleetByID(@Param("ID") String ID);
     List<HockeyAtleet> findHockeyAtleetByPositie(@Param("positie") String positie);
     HockeyAtleet findHockeyAtleetByPloegAndPositie(@Param("ploeg") String ploeg,
                                                  @Param("positie") String positie);

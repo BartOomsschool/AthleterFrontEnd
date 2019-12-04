@@ -7,6 +7,7 @@ import { HockeyComponent } from './views/hockey/hockey/hockey.component';
 import { HockeyatleetToevoegenComponent } from './views/hockey/hockeyatleet-toevoegen/hockeyatleet-toevoegen.component';
 import { HockeyatleetUpdatenComponent } from './views/hockey/hockeyatleet-updaten/hockeyatleet-updaten.component';
 import { BadmintonBeherenComponent } from './views/badminton/beheren/badminton-beheren.component';
+import { HockeyatleetBeherenComponent } from './views/hockey/hockeyatleet-beheren/hockeyatleet-beheren.component';
 import { VoetbalatleetBeherenComponent } from './views/voetbal/voetbalatleet-beheren/voetbalatleet-beheren/voetbalatleet-beheren.component';
 import { HomeComponent } from './views/home/home/home.component';
 import { VolleybalatleetBeherenComponent } from './views/volleybal/volleybalatleet-beheren/volleybalatleet-beheren/volleybalatleet-beheren.component';
@@ -19,6 +20,7 @@ const appRoutes: Routes = [
   { path: 'hockey', component: HockeyComponent},
   { path: 'hockeyAtleetToevoegen', component: HockeyatleetToevoegenComponent},
   { path: 'hockeyAtleetUpdaten/:id', component: HockeyatleetUpdatenComponent},
+  { path: 'hockeyBeheren', component: HockeyatleetBeherenComponent},
   { path: 'voetbalAtleetBeheren', component: VoetbalatleetBeherenComponent},
   { path: '', component: HomeComponent},
   { path: 'volleybalAtleetBeheren', component: VolleybalatleetBeherenComponent},
