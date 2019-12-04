@@ -44,6 +44,10 @@ header {
     }
   }
 
+  .home-link{
+    font-weight: bold;
+  }
+
   .nav-toggle {
     display: none;
   }
@@ -68,7 +72,7 @@ header {
         color: $dark-clr;
       }
 
-      .voetbal-link, .badminton-link, .hockey-link, .volleybal-link  {
+      .links  {
         padding-right: 4rem;
       }
 
@@ -105,7 +109,7 @@ header {
       ul {
         margin-top: 12px;   
 
-        .voetbal-link, .badminton-link, .hockey-link, .volleybal-link  {
+        .links  {
           padding-right: 1.5rem;
         }
 
@@ -243,7 +247,7 @@ main {
 }
 .container {
     margin-top: 70px;
-    min-height: 87vh;
+    min-height: 80vh;
     margin-bottom: 30px;
 }
 

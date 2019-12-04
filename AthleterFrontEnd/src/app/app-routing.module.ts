@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { VoetbalComponent } from './views/voetbal/voetbal/voetbal.component';
-import { VoetbalAtleetToevoegenComponent } from './views/voetbal/voetbalatleet-toevoegen/voetbalatleet-toevoegen/voetbalatleet-toevoegen.component';
 import { BadmintonComponent } from './views/badminton/badminton/badminton.component';
-import { VoetbalatleetUpdatenComponent } from './views/voetbal/voetbalatleet-updaten/voetbalatleet-updaten/voetbalatleet-updaten.component';
 import { VolleybalatleetToevoegenComponent } from './views/volleybal/volleybalatleet-toevoegen/volleybalatleet-toevoegen/volleybalatleet-toevoegen.component';
 import { VolleybalatleetUpdatenComponent } from './views/volleybal/volleybalatleet-updaten/volleybalatleet-updaten/volleybalatleet-updaten.component';
 import { VolleybalComponent } from './views/volleybal/volleybal/volleybal.component';
@@ -12,11 +10,10 @@ import { HockeyatleetToevoegenComponent } from './views/hockey/hockeyatleet-toev
 import { HockeyatleetUpdatenComponent } from './views/hockey/hockeyatleet-updaten/hockeyatleet-updaten.component';
 import { BadmintonBeherenComponent } from './views/badminton/beheren/badminton-beheren.component';
 import { VoetbalatleetBeherenComponent } from './views/voetbal/voetbalatleet-beheren/voetbalatleet-beheren/voetbalatleet-beheren.component';
+import { HomeComponent } from './views/home/home/home.component';
 
 const appRoutes: Routes = [
   { path: 'voetbal', component: VoetbalComponent },
-  { path: 'voetbalAtleetToevoegen', component: VoetbalAtleetToevoegenComponent },
-  { path: 'voetbalAtleetUpdaten/:id', component: VoetbalatleetUpdatenComponent },
   { path: 'badminton', component: BadmintonComponent },
   { path: 'badmintonBeheren', component: BadmintonBeherenComponent },
   { path: 'volleybal', component: VolleybalComponent },
@@ -25,7 +22,8 @@ const appRoutes: Routes = [
   { path: 'hockey', component: HockeyComponent},
   { path: 'hockeyAtleetToevoegen', component: HockeyatleetToevoegenComponent},
   { path: 'hockeyAtleetUpdaten/:id', component: HockeyatleetUpdatenComponent},
-  { path: 'voetbalAtleetBeheren', component: VoetbalatleetBeherenComponent}
+  { path: 'voetbalAtleetBeheren', component: VoetbalatleetBeherenComponent},
+  { path: 'home', component: HomeComponent}
 ];
 
 @NgModule({

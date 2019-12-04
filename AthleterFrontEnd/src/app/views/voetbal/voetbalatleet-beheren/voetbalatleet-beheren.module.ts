@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { VoetbalatleetBeherenComponent } from './voetbalatleet-beheren/voetbalatleet-beheren.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 
