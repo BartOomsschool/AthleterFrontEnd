@@ -20,24 +20,9 @@ getAtleten(){
   });
 }
 
-naarAtleetToevoegen() {
-  this.router.navigate(['volleybalAtleetToevoegen']);
+volleybalAtleetBeheren() {
+  this.router.navigate(['volleybalAtleetBeheren']);
 }
-
-deleteAtleet(id: number){
-  this._volleybalService.deleteAtleet(id).subscribe(result =>{
-    console.log('deleted atleet:', result);
-    this.getAtleten();
-  });
-}
-
-updateAtleet(atleetID: string){
-  this.router.navigate(['volleybalAtleetUpdaten' , atleetID]);
-}
-
-naarHome() {
-  this.router.navigate(['/']);
-  }
 
 
   ngOnInit() {

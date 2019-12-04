@@ -1,0 +1,60 @@
+<h1>Volleybal beheren</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+    
+      <th scope="col">Naam</th>
+      <th scope="col">Team</th>
+      <th scope="col">Positie</th>
+      <th scope="col">Lengte</th>
+      <th scope="col">Geslacht</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let a of atleten">
+      <td>{{a.naam}}</td>
+      <td>{{a.team}}</td>
+      <td>{{a.positie}}</td>
+      <td>{{a.lengteInCentimeter}}</td>
+      <td>{{a.geslacht}}</td>
+      <td>
+        <button type="button" class="btn btn-warning knop"(click)="updateAtleet(a)"><i class="fas fa-edit"></i></button>
+        <button type="button" class="btn btn-danger knop" (click)="deleteAtleet(a.volleyballid)"><i class="fas fa-trash-alt"></i></button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<button class="button button--nuka" (click)="toevoegenPopup()">Atleet toevoegen</button>
+
+<div class="popupBox" *ngIf="popup">
+    <div class="popup">
+        <div (click)="closePopup()" id="close"><i class="fas fa-times fa-2x exitIcon"></i></div>
+        <h1>Atleet toevoegen</h1>
+        <form #atleetForm="ngForm"  (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="naam">Naam</label>
+                <input type="text" class="form-control" id="naam" [(ngModel)]="atleet.naam" name="atleetform1" required>
+            </div>
+            <div class="form-group">
+                <label for="team">Team</label>
+                <input type="text" class="form-control" id="team" [(ngModel)]="atleet.team"  name="atleetform2" required>
+            </div>
+            <div class="form-group">
+                <label for="positie">Positie</label>
+                <input type="text" class="form-control" id="positie" [(ngModel)]="atleet.positie"  name="atleetform3" required>
+            </div>
+            <div class="form-group">
+                <label for="lengteInCentimeter">Lengte</label>
+                <input type="text" class="form-control" id="lengteInCentimeter" [(ngModel)]="atleet.lengteInCentimeter"  name="atleetform4" required>
+            </div>
+            <div class="form-group">
+                <label for="geslacht">Geslacht</label>
+                <input type="text" class="form-control" id="geslacht" [(ngModel)]="atleet.geslacht"  name="atleetform5" required>
+            </div>
+            <button type="submit" class="btn btn-primary submitKnop">Toevoegen</button>
+        </form>
+    </div>
+</div>

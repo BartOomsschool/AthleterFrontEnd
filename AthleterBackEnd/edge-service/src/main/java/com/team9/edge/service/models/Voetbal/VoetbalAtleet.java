@@ -1,16 +1,24 @@
 package com.team9.edge.service.models.Voetbal;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.util.Date;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
+@ApiModel(description = "Alles over VoetbalAtleet")
 public class VoetbalAtleet {
+
+    @ApiModelProperty(notes = "De database genereert de Id met auto nummering")
     private String voetbalAtleetID;
+    @ApiModelProperty(notes = "De naam van de atleet")
     private String naam;
+    @ApiModelProperty(notes = "De naam van het team van de atleet")
     private String team;
+    @ApiModelProperty(notes = "De positie van de atleet op het veld")
     private String positie;
 
 
