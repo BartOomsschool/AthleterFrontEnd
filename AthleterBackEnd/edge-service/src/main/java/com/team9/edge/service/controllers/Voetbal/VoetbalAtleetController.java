@@ -28,7 +28,8 @@ public class VoetbalAtleetController {
     @ApiOperation(value = "Geeft een atleet terug met de opgegeven Id", response = List.class)
     @GetMapping("getatleet/{voetbalAtleetID}")
     public VoetbalAtleet getVoetbalAtleetByVoetbalAtleetID(@PathVariable("voetbalAtleetID") String voetbalAtleetID){
-        VoetbalAtleet voetbalAtleet = restTemplate.getForObject("http://voetbal-service/voetbalAtleets/search/findVoetbalAtleetByVoetbalAtleetID?voetbalAtleetID=" + voetbalAtleetID, VoetbalAtleet.class);
+        VoetbalAtleet voetbalAtleet = restTemplate.getForObject("http://voetbal-service/voetbalAtleets/search/findVoetbalAtleetByVoetbalAtleetID?voetbalAtleetID=" + voetbalAtleetID
+                , VoetbalAtleet.class);
         return voetbalAtleet;
     }
 
@@ -44,7 +45,7 @@ public class VoetbalAtleetController {
 
     @ApiOperation(value = "Voegt een atleet toe", response = List.class)
     @PostMapping("postatleet")
-    public ResponseEntity<String> postSpeler(@RequestBody VoetbalAtleet voetbalAtleet){
+    public ResponseEntity<String> postAtleet(@RequestBody VoetbalAtleet voetbalAtleet){
         VoetbalAtleet player = new VoetbalAtleet(voetbalAtleet.getNaam(), voetbalAtleet.getTeam(), voetbalAtleet.getPositie());
         ResponseEntity<String> result = restTemplate.postForEntity("http://voetbal-service/voetbalAtleets/", player, String.class);
         return ResponseEntity.ok().build();
@@ -52,7 +53,7 @@ public class VoetbalAtleetController {
 
     @ApiOperation(value = "Update de opgegeven atleet", response = List.class)
     @PutMapping("putatleet")
-    public ResponseEntity<String> putSpeler(@RequestBody VoetbalAtleet voetbalAtleet){
+    public ResponseEntity<String> putAtleet(@RequestBody VoetbalAtleet voetbalAtleet){
         restTemplate.put("http://voetbal-service/voetbalAtleets/" + voetbalAtleet.getVoetbalAtleetID(), voetbalAtleet, String.class);
         return ResponseEntity.ok().build();
     }
@@ -60,7 +61,7 @@ public class VoetbalAtleetController {
 
     @ApiOperation(value = "Verwijdert de atleet met opgegeven Id", response = List.class)
     @DeleteMapping("deleteatleet/{voetbalAtleetID}")
-    public ResponseEntity deleteTeam(@PathVariable("voetbalAtleetID") String voetbalAtleetID) {
+    public ResponseEntity deleteAtleet(@PathVariable("voetbalAtleetID") String voetbalAtleetID) {
         restTemplate.delete("http://voetbal-service/voetbalAtleets/" + voetbalAtleetID);
         return ResponseEntity.ok().build();
     }
