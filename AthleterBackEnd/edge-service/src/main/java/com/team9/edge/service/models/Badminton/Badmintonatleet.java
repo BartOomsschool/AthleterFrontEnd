@@ -1,19 +1,31 @@
 package com.team9.edge.service.models.Badminton;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
+@ApiModel(description = "Alles over de badmintonAtleet")
 public class Badmintonatleet {
+    @ApiModelProperty(notes = "de database genereert de id met autonummering")
     private int atleetID;
+    @ApiModelProperty(notes = "Type discipline waarin de speler speelt")
     private String categorie;
+    @ApiModelProperty(notes = "De rank die de speler heeft")
     private int rank;
+    @ApiModelProperty(notes = "Het land waarvan de speler afkomstig is")
     private String land;
+    @ApiModelProperty(notes = "Naam van de speler")
     private String naam;
+    @ApiModelProperty(notes = "Het aantal punten dat de speler heeft")
     private int punten;
+    @ApiModelProperty(notes = "Aantal gewonnen toernooien")
     private int toernooien;
+    @ApiModelProperty(notes = "Afbeelding van de speler")
     private String afbeelding;
+    @ApiModelProperty(notes = "Partner waarmee de speler samen speelt")
     private Integer partnerID;
 
     public Badmintonatleet() {

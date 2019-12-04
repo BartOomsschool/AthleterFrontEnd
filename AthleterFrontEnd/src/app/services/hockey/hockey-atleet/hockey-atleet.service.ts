@@ -26,8 +26,8 @@ export class HockeyAtleetService {
     return this.http.post<HockeyAtleet>("http://localhost:8050/hockeyAtleets/postAtleet/", atleet);
   }
 
-  updateHockeyAtleet(id: string, atleet: HockeyAtleet){
-    return this.http.put<HockeyAtleet>("http://localhost:8050/hockeyAtleets/putAtleet/" + id, atleet);
+  updateHockeyAtleet(atleet: HockeyAtleet){
+    return this.http.put<HockeyAtleet>("http://localhost:8050/hockeyAtleets/putAtleet/", atleet);
   }
 
 }

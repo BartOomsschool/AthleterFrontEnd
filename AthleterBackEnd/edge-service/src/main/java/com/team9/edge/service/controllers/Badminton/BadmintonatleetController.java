@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.team9.edge.service.models.Badminton.Badmintonatleet;
 import com.team9.edge.service.models.GenericResponseWrapper;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -20,6 +21,7 @@ public class BadmintonatleetController {
     @Autowired
     private ObjectMapper objectMapper;
 
+    @ApiOperation(value = "Geeft een lijst terug van alle atleten", response = List.class)
     @GetMapping("/getBadmintonatleten")
     public List<Badmintonatleet> getBadmintonatleten(){
         GenericResponseWrapper wrapper = restTemplate.getForObject("http://badminton-service/badmintonatleets?page=0&size=5000", GenericResponseWrapper.class);
@@ -29,12 +31,14 @@ public class BadmintonatleetController {
         return atleten;
     }
 
+    @ApiOperation(value = "Geeft een atleet terug met de opgegeven Id", response = List.class)
     @GetMapping("getBadmintonatleet/{badmintonatleetID}")
     public Badmintonatleet getVoetbalAtleetByVoetbalAtleetID(@PathVariable("badmintonatleetID") String atleetID){
         Badmintonatleet voetbalAtleet = restTemplate.getForObject("http://badminton-service/badmintonatleets/" + atleetID, Badmintonatleet.class);
         return voetbalAtleet;
     }
 
+    @ApiOperation(value = "Voegt een atleet toe", response = List.class)
     @PostMapping("/postBadmintonatleet")
     public ResponseEntity<String> postBadmintonatleet(@RequestBody Badmintonatleet atleetPost){
 
@@ -49,12 +53,15 @@ public class BadmintonatleetController {
         return ResponseEntity.ok().build();
     }
 
+
+    @ApiOperation(value = "Update de opgegeven atleet", response = List.class)
     @PutMapping("/putBadmintonatleet")
     public ResponseEntity<String> putBadmintonatleet(@RequestBody Badmintonatleet atleet){
         restTemplate.put("http://badminton-service/badmintonatleets/" + atleet.getAtleetID(), atleet, String.class);
         return ResponseEntity.ok().build();
     }
 
+    @ApiOperation(value = "Verwijdert de atleet met opgegeven Id", response = List.class)
     @DeleteMapping("/deleteBadmintonatleet/{badmintonatleetID}")
     public ResponseEntity deleteBadmintonatleet(@PathVariable("badmintonatleetID") String badmintonatleetID) {
         restTemplate.delete("http://badminton-service/badmintonatleets/" + badmintonatleetID);

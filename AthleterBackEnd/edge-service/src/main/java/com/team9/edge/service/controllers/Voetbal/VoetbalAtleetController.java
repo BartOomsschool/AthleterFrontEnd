@@ -50,7 +50,6 @@ public class VoetbalAtleetController {
         return ResponseEntity.ok().build();
     }
 
-
     @ApiOperation(value = "Update de opgegeven atleet", response = List.class)
     @PutMapping("putatleet")
     public ResponseEntity<String> putSpeler(@RequestBody VoetbalAtleet voetbalAtleet){
