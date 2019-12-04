@@ -1,7 +1,8 @@
 <header>
   <div class="nav-display">
-    
-    <img src="assets/img/LogoAthleterLang.png" class="imgnav"/>
+    <a href=# [routerLink]="['']" routerLinkActive="router-link-active" >
+      <img src="assets/img/LogoAthleterLang.png" class="imgnav"/>
+    </a>
     <label for="nav-toggle" class="nav-toggle-label">
        <span></span>
     </label>
@@ -9,9 +10,9 @@
   <input type="checkbox" id="nav-toggle" class="nav-toggle">
   <nav>
     <ul>
+      <li class="home-link links"><a href=# [routerLink]="['']" routerLinkActive="router-link-active" >Home</a></li>
       <li class="voetbal-link links"><a href=# [routerLink]="['/voetbal']" routerLinkActive="router-link-active" >Voetbal</a></li>
       <li class="badminton-link links"><a href=# [routerLink]="['/badminton']" routerLinkActive="router-link-active" >Badminton</a></li>
-
       <li class="hockey-link links"><a href=# [routerLink]="['/hockey']" routerLinkActive="router-link-active" >Hockey</a></li>
       <li class="volleybal-link links"><a href=# [routerLink]="['/volleybal']" routerLinkActive="router-link-active" >Volleybal</a></li>
 

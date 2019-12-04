@@ -25,25 +25,10 @@ export class VoetbalComponent implements OnInit {
       console.log('Atleten: ', result);
     });
   }
-  naarAtleetToevoegen() {
-    this.router.navigate(['voetbalAtleetToevoegen']);
+  voetbalAtleetBeheren() {
+    this.router.navigate(['voetbalAtleetBeheren']);
   }
 
-  deleteAtleet(id: number){
-    this._voetbalAtleetService.deleteAtleet(id).subscribe(result =>{
-      console.log('deleted atleet:', result);
-      this.getAtleten();
-    });
-  }
-
-  updateAtleet(atleetID: string){
-    this.router.navigate(['voetbalAtleetUpdaten' , atleetID]);
-  }
-
-
-  naarHome() {
-    this.router.navigate(['/']);
-    }
 
 
   ngOnInit() {
