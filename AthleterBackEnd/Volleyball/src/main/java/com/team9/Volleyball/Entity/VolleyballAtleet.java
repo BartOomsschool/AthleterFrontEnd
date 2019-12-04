@@ -1,26 +1,31 @@
-package com.team9.edge.service.models.Volleybal;
+package com.team9.Volleyball.Entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import lombok.Data;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import java.util.Date;
 
 @Data
-@JsonIgnoreProperties(ignoreUnknown = true)
-public class VolleyballSpeler {
-    private String id;
+@Document(collection ="VolleyballAtleet")
+public class VolleyballAtleet {
+    @Id
+    private String volleyballid;
     private String naam;
     private String lengteInCm;
     private String selecties;
     private String geboortedatum;
     private String geslacht;
-    private String positieId;
-    private String teamId;
+    private String positie;
+    private String team;
 
-    public String getId() {
-        return id;
+    public String getVolleyballid() {
+        return volleyballid;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setVolleyballid(String volleyballid) {
+        this.volleyballid = volleyballid;
     }
 
     public String getNaam() {
@@ -63,43 +68,43 @@ public class VolleyballSpeler {
         this.geslacht = geslacht;
     }
 
-    public String getPositieId() {
-        return positieId;
+    public String getPositie() {
+        return positie;
     }
 
-    public void setPositieId(String positieId) {
-        this.positieId = positieId;
+    public void setPositie(String positie) {
+        this.positie = positie;
     }
 
-    public String getTeamId() {
-        return teamId;
+    public String getTeam() {
+        return team;
     }
 
-    public void setTeamId(String teamId) {
-        this.teamId = teamId;
+    public void setTeam(String team) {
+        this.team = team;
     }
 
-    public VolleyballSpeler() {
+    public VolleyballAtleet() {
     }
 
-    public VolleyballSpeler(String id, String naam, String lengteInCm, String selecties, String geboortedatum, String geslacht, String positieId, String teamId) {
-        this.id = id;
+    public VolleyballAtleet(String volleyballid, String naam, String lengteInCm, String selecties, String geboortedatum, String geslacht, String positie, String team) {
+        this.volleyballid = volleyballid;
         this.naam = naam;
         this.lengteInCm = lengteInCm;
         this.selecties = selecties;
         this.geboortedatum = geboortedatum;
         this.geslacht = geslacht;
-        this.positieId = positieId;
-        this.teamId = teamId;
+        this.positie = positie;
+        this.team = team;
     }
 
-    public VolleyballSpeler(String naam, String lengteInCm, String selecties, String geboortedatum, String geslacht, String positieId, String teamId) {
+    public VolleyballAtleet(String naam, String lengteInCm, String selecties, String geboortedatum, String geslacht, String positie, String team) {
         this.naam = naam;
         this.lengteInCm = lengteInCm;
         this.selecties = selecties;
         this.geboortedatum = geboortedatum;
         this.geslacht = geslacht;
-        this.positieId = positieId;
-        this.teamId = teamId;
+        this.positie = positie;
+        this.team = team;
     }
 }
