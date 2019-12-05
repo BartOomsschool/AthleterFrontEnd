@@ -26,7 +26,7 @@ export class VolleybalatleetBeherenComponent implements OnInit {
     });
   }
 
-  deleteAtleet(id: number){
+  deleteAtleet(id: string){
     this._volleybalAtleetService.deleteAtleet(id).subscribe(result =>{
       this.getAtleten();
     });

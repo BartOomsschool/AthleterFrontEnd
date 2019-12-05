@@ -17,7 +17,7 @@
       <td>{{a.naam}}</td>
       <td>{{a.team}}</td>
       <td>{{a.positie}}</td>
-      <td>{{a.lengteInCentimeter}}</td>
+      <td>{{a.lengteInCm}}</td>
       <td>{{a.geslacht}}</td>
       <td>
         <button type="button" class="btn btn-warning knop"(click)="updateAtleet(a)"><i class="fas fa-edit"></i></button>
@@ -47,8 +47,8 @@
                 <input type="text" class="form-control" id="positie" [(ngModel)]="atleet.positie"  name="atleetform3" required>
             </div>
             <div class="form-group">
-                <label for="lengteInCentimeter">Lengte</label>
-                <input type="text" class="form-control" id="lengteInCentimeter" [(ngModel)]="atleet.lengteInCentimeter"  name="atleetform4" required>
+                <label for="lengteInCm">Lengte</label>
+                <input type="text" class="form-control" id="lengteInCm" [(ngModel)]="atleet.lengteInCm"  name="atleetform4" required>
             </div>
             <div class="form-group">
                 <label for="geslacht">Geslacht</label>

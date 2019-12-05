@@ -10,12 +10,15 @@ import { Router } from '@angular/router';
 })
 export class VolleybalComponent implements OnInit {
 
-  constructor(private _volleybalService: VolleybalAtleetService, private router: Router) { }
+  constructor(private _volleybalService: VolleybalAtleetService, private router: Router) { 
+    this.getAtleten();
+  }
 
   volleybalAtleten: VolleybalAtleet[];
 
 getAtleten(){
   this._volleybalService.getAtleten().subscribe(result => {
+    console.log("atleten:", result)
     this.volleybalAtleten = result;
   });
 }

@@ -1,12 +1,12 @@
 <h1>Volleybal</h1>
 
 <div class="row justify-content-center">
-    <div class="card col-3" *ngFor="let a of (atleten)">
+    <div class="card col-3" *ngFor="let a of (volleybalAtleten)">
         <div class="card-body">
             <h2>{{a.naam}}</h2>
             <p id="firstItem"><i class="fas fa-layer-group"></i> Team: <span>{{a.team}}</span></p>
             <p><i class="fas fa-award"></i> Positie: <span>{{a.positie}}</span></p>
-            <p><i class="fas fa-ruler-vertical"></i> Lengte: <span>{{a.lengteInCentimeter}}</span></p>
+            <p><i class="fas fa-ruler-vertical"></i> Lengte: <span>{{a.lengteInCm}} cm</span></p>
             <p><i class="fas fa-restroom"></i> Geslacht: <span>{{a.geslacht}}</span></p>
         </div>
     </div>

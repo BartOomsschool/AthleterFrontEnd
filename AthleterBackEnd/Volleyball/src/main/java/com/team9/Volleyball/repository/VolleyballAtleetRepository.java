@@ -6,4 +6,5 @@ import org.springframework.data.repository.query.Param;
 
 public interface VolleyballAtleetRepository extends MongoRepository<VolleyballAtleet, Integer> {
     VolleyballAtleet findVolleyballAtleetByNaam(@Param("naam")String naam);
+    VolleyballAtleet findVolleyballAtleetByVolleyballid(@Param("volleyballid") String volleyballid);
 }
