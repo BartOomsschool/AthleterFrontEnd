@@ -11,18 +11,18 @@ export class BadmintonAtleetService {
   constructor(private http: HttpClient) { }  
 
   getBadmintonAtleten(): Observable<BadmintonAtleet[]> {
-    return this.http.get<BadmintonAtleet[]>("http://localhost:8050/badminton/getBadmintonatleten");
+    return this.http.get<BadmintonAtleet[]>("http://localhost:8762/sportapi/badminton/getBadmintonatleten");
   } 
 
   addBadmintonAtleet(atleet: BadmintonAtleet) {
-    return this.http.post<BadmintonAtleet>("http://localhost:8050/badminton/postBadmintonatleet", atleet);
+    return this.http.post<BadmintonAtleet>("http://localhost:8762/sportapi/badminton/postBadmintonatleet", atleet);
   }
 
   updateBadmintonAtleet(atleet: BadmintonAtleet) {
-    return this.http.put<BadmintonAtleet>("http://localhost:8050/badminton/putBadmintonatleet", atleet);
+    return this.http.put<BadmintonAtleet>("http://localhost:8762/sportapi/badminton/putBadmintonatleet", atleet);
   }
 
   deleteBadmintonAtleet(id: number) {
-    return this.http.delete<BadmintonAtleet>("http://localhost:8050/badminton/deleteBadmintonatleet/" + id);
+    return this.http.delete<BadmintonAtleet>("http://localhost:8762/sportapi/badminton/deleteBadmintonatleet/" + id);
   }
 }

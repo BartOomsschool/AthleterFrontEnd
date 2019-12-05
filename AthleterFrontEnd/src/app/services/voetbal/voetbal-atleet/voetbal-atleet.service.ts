@@ -11,22 +11,22 @@ export class VoetbalAtleetService {
   constructor(private http: HttpClient) { }
 
   getAtleten(): Observable<VoetbalAtleet[]> {
-      return this.http.get<VoetbalAtleet[]>("http://localhost:8050/voetbalAtleets/getatleten");
+      return this.http.get<VoetbalAtleet[]>("http://localhost:8762/sportapi/voetbalAtleets/getatleten");
   }
 
   getAtleet(voetbalAtleetID: string): Observable<VoetbalAtleet> {
-    return this.http.get<VoetbalAtleet>("http://localhost:8050/voetbalAtleets/getatleet/" + voetbalAtleetID);
+    return this.http.get<VoetbalAtleet>("http://localhost:8762/sportapi/voetbalAtleets/getatleet/" + voetbalAtleetID);
 }
 
   addAtleet(voetbalAtleet: VoetbalAtleet) {
-      return this.http.post<VoetbalAtleet>("http://localhost:8050/voetbalAtleets/postatleet", voetbalAtleet);
+      return this.http.post<VoetbalAtleet>("http://localhost:8762/sportapi/voetbalAtleets/postatleet", voetbalAtleet);
   }
 
   updateAtleet(voetbalAtleet: VoetbalAtleet) {
-      return this.http.put<VoetbalAtleet>("http://localhost:8050/voetbalAtleets/putatleet", voetbalAtleet);
+      return this.http.put<VoetbalAtleet>("http://localhost:8762/sportapi/voetbalAtleets/putatleet", voetbalAtleet);
   }
 
   deleteAtleet(voetbalAtleetID: number) {
-      return this.http.delete<VoetbalAtleet>("http://localhost:8050/voetbalAtleets/deleteatleet/" + voetbalAtleetID);
+      return this.http.delete<VoetbalAtleet>("http://localhost:8762/sportapi/voetbalAtleets/deleteatleet/" + voetbalAtleetID);
   }
 }
