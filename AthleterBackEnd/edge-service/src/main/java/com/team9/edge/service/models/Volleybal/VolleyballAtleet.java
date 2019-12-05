@@ -1,18 +1,30 @@
 package com.team9.edge.service.models.Volleybal;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
+@ApiModel(description = "Alles over VolleybalAtleet")
 public class VolleyballAtleet {
+
+    @ApiModelProperty(notes = "De database genereert de Id met auto nummering")
     private String volleyballid;
+    @ApiModelProperty(notes = "De naam van de atleet")
     private String naam;
+    @ApiModelProperty(notes = "De lengte van de atleet")
     private String lengteInCm;
+    @ApiModelProperty(notes = "De selectie van de atleet")
     private String selecties;
+    @ApiModelProperty(notes = "De geboortedatum van de atleet")
     private String geboortedatum;
+    @ApiModelProperty(notes = "De geslacht van de atleet")
     private String geslacht;
+    @ApiModelProperty(notes = "De positie van de atleet")
     private String positie;
+    @ApiModelProperty(notes = "De team van de atleet")
     private String team;
 
     public String getVolleyballid() {
