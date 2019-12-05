@@ -3,11 +3,12 @@
 Athleter is een webapplicatie waar gebruikers atleten van bepaalde sporten kunnen bekijken en beheren. 
 
 Deze spring boot applicatie bestaat uit:
-    - 4 microservices, 
-    - een edge-service, 
-    - een eureka server,
-    - een zuul gateway  
-    - een Angular front-end.
+
+    * 4 microservices, 
+    * een edge-service, 
+    * een eureka server,
+    * een zuul gateway  
+    * een Angular front-end.
 
 ## Team
 
