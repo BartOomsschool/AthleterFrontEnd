@@ -1,12 +1,14 @@
 <h1>Voetbal</h1>
 
 <div class="row justify-content-center">
-    <div class="card col-3" *ngFor="let a of (atleten)">
+    <div class="card col-3" *ngFor="let a of (atleten); let i = index">
+        <img src="assets/img/voetbal/{{atletenAfbeeldingen[i]}}" class="card-img-top">
         <div class="card-body">
             <h2>{{a.naam}}</h2>
-            <p id="firstItem"><i class="fas fa-layer-group"></i> Team: <span>{{a.team}}</span></p>
-            <p><i class="fas fa-award"></i> Positie: <span>{{a.positie}}</span></p>
+            <p id="firstItem"><i class="fas fa-users"></i> Team: <span>{{a.team}}</span></p>
+            <p><i class="fas fa-crosshairs"></i> Positie: <span>{{a.positie}}</span></p>
+            <hr/>
         </div>
     </div>
 </div>
-<button class="button button--nuka"  (click)="voetbalAtleetBeheren()">Voetbal Beheren</button>
+<button class="button button--nuka"  (click)="voetbalAtleetBeheren()">Voetbal beheren</button>

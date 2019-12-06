@@ -16,13 +16,23 @@ export class VoetbalComponent implements OnInit {
    }
 
     atleten: VoetbalAtleet[];
+    atletenAfbeeldingen = [];
 
 
 
   getAtleten(){
     this._voetbalAtleetService.getAtleten().subscribe(result =>{
       this.atleten = result;
-      console.log('Atleten: ', result);
+
+      var count = 0;
+      for (var atleet of this.atleten){
+        if (count <= 3){
+          this.atletenAfbeeldingen.push((atleet.naam.split(" ")[0] + ".jpg"));
+        } else {
+          this.atletenAfbeeldingen.push("noImage.jpg");
+        }
+          count++;
+      }
     });
   }
   voetbalAtleetBeheren() {

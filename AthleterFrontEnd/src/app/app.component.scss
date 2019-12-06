@@ -248,7 +248,7 @@ main {
 .container {
     margin-top: 70px;
     min-height: 80vh;
-    margin-bottom: 30px;
+    margin-bottom: 70px;
 }
 
 .imgnav{
@@ -256,6 +256,9 @@ main {
     margin-left: 40px;
 }
 .footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
     width: 100%;
     background: $light-accent-clr;
     color: $dark-clr;

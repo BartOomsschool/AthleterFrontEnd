@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class HockeyComponent implements OnInit {
 
   atleten: HockeyAtleet[];
+  atletenAfbeeldingen = [];
 
   constructor(private _hockeyService: HockeyAtleetService, private router: Router) { }
 
@@ -21,6 +22,16 @@ export class HockeyComponent implements OnInit {
   getAtleten(){
     this._hockeyService.getHockeyAtleten().subscribe(result => {
       this.atleten = result;
+
+      var count = 0;
+      for (var atleet of this.atleten){
+        if (count <= 7){
+          this.atletenAfbeeldingen.push((atleet.naam.split(" ")[0] + ".jpg"));
+        } else {
+          this.atletenAfbeeldingen.push("noImage.jpg");
+        }
+          count++;
+      }
     })
   }
 

@@ -32,7 +32,7 @@ table {
     tbody{
         th, td{
             vertical-align: middle !important;
-            color: $dark-clr;
+            color: $dark-clr !important;
         }
 
         tr:nth-child(even){

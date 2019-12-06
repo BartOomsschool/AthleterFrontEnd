@@ -1,3 +1,5 @@
+<h1>Hockey beheren</h1>
+
 <table class="table">
     <thead>
         <tr>
@@ -8,16 +10,19 @@
         </tr>
     </thead>
 
-    <tr *ngFor="let a of (atleten)">
-        <td>{{a.naam}}</td>
-        <td>{{a.ploeg}}</td>
-        <td>{{a.positie}}</td>
-        <td>
-            <button type="button" class="btn btn-warning knop" (click)="updateHockeyAtleet(a)"><i
-                    class="fas fa-edit"></i></button>
-            <button type="button" class="btn btn-danger knop" (click)="deleteHockeyAtleet(a.id)"><i
-                    class="fas fa-trash-alt"></i></button></td>
-    </tr>
+    <tbody>
+        <tr *ngFor="let a of (atleten)">
+            <td>{{a.naam}}</td>
+            <td>{{a.ploeg}}</td>
+            <td>{{a.positie}}</td>
+            <td>
+                <button type="button" class="btn btn-warning knop" (click)="updateHockeyAtleet(a)"><i
+                        class="fas fa-edit"></i></button>
+                <button type="button" class="btn btn-danger knop" (click)="deleteHockeyAtleet(a.id)"><i
+                        class="fas fa-trash-alt"></i></button></td>
+        </tr>
+    </tbody>
+
 </table>
 <button class="button button--nuka" (click)="toevoegenPopup()">Atleet toevoegen</button>
 <div class="popupBox" *ngIf="popup">
